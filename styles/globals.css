@@ -2,4 +2,6 @@
 body,
 html{
   overflow-x: hidden;
+  background: #fff;
+  direction: rtl;
 }
