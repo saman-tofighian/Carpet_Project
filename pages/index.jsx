@@ -4,6 +4,7 @@ import Frame from "@/Components/Frame/Frame";
 import Frame2 from "@/Components/Frame/Frame2";
 import Header from "@/Components/Header/Header";
 import Motto from "@/Components/Motto/Motto";
+import Slider1 from "@/Components/Slider/Slider1";
 import { useEffect } from "react";
 
 function Home() {
@@ -20,6 +21,7 @@ function Home() {
       <Header />
       <Motto />
       <Frame />
+      <Slider1 />
       <Frame2 />
       <Advertisement />
       <Footer />
