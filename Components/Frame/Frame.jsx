@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Frame() {
     return (
-      <section className="w-full mt-28 pb-36">
+      <section className="w-full mt-40 pb-36">
         <div className="w-full px-[4%] flex items-center">
           <div className="w-[55%] flex items-center justify-center gap-x-9">
             <figure className="relative w-[65%] rounded-2xl bg-[url(/1f.png)] h-[318px] max-h-[318px] bg-cover flex items-end after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-gradient-to-r after:from-transparent after:to-[#013075] after:opacity-80 after:rounded-2xl">
