@@ -18,16 +18,16 @@ function Slider2() {
                 <Swiper spaceBetween={33} slidesPerView={4}>
                     <SwiperSlide className="border border-[#D9D9D9] rounded-[12px] p-4 max-w-[21.3%]">
                         <figure className="w-full flex justify-center">
-                            <img src="./Slider2.png" alt="picSlider2" className="w-[255px] h-[261px]" />
+                            <img src="./Slider5.png" alt="picSlider5" className="w-[255px] h-[261px]" />
                         </figure>
                         <div className="w-full px-6 mt-6">
                             <p className="font-medium text-[18px] text-[#121212] leading-8">
-                            فرش کهن  دست بافت سهند زمینه سرمه ای 
+                            فرش ماشینی فرش ماهساره طرح آترینا زمینه آبی
                             </p> 
                         </div>
                         <div className="w-full flex justify-between px-6 mt-8">
                             <span className="text-[#121212] font-medium text-[16px]">قیمت :</span>
-                            <span className="text-[#121212] font-medium text-[18px]">۲۳۳/۰۰۰ تومان</span>
+                            <span className="text-[#121212] font-medium text-[18px]">۱۳/۵۰۰/۰۰۰ تومان</span>
                         </div>
                         <div className="w-full flex justify-center px-6 mt-10">
                             <Link href='/' className="text-[#CB1B1B] border border-[#CB1B1B] rounded-[12px] py-3 w-full text-center text-[15px] font-bold ease-linear duration-700 hover:text-white hover:bg-[#CB1B1B]">مشاهده  بیشتر</Link>
@@ -35,16 +35,16 @@ function Slider2() {
                     </SwiperSlide>
                     <SwiperSlide className="border border-[#D9D9D9] rounded-[12px] p-4 max-w-[21.3%]">
                         <figure className="w-full flex justify-center">
-                            <img src="./slider2.png" alt="picSlider2" className="w-[255px] h-[261px]" />
+                            <img src="./slider6.png" alt="picSlider6" className="w-[255px] h-[261px]" />
                         </figure>
                         <div className="w-full px-6 mt-6">
                             <p className="font-medium text-[18px] text-[#121212] leading-8">
-                            فرش دست بافت زانیس  طرح ماربل زمینه نوک مدادی
+                            فرش ماشینی لوکس سهند زمینه سرمه ای 
                             </p> 
                         </div>
                         <div className="w-full flex justify-between px-6 mt-8">
                             <span className="text-[#121212] font-medium text-[16px]">قیمت :</span>
-                            <span className="text-[#121212] font-medium text-[18px]">۴۹/۹۲۰ تومان</span>
+                            <span className="text-[#121212] font-medium text-[18px]">۲۳۳/۰۰۰ تومان</span>
                         </div>
                         <div className="w-full flex justify-center px-6 mt-10">
                             <Link href='/' className="text-[#CB1B1B] border border-[#CB1B1B] rounded-[12px] py-3 w-full text-center text-[15px] font-bold ease-linear duration-700 hover:text-white hover:bg-[#CB1B1B]">مشاهده  بیشتر</Link>
@@ -52,16 +52,16 @@ function Slider2() {
                     </SwiperSlide>
                     <SwiperSlide className="border border-[#D9D9D9] rounded-[12px] p-4 max-w-[21.3%]">
                     <figure className="w-full flex justify-center">
-                            <img src="./slider3.png" alt="picSlider3" className="w-[255px] h-[261px]" />
+                            <img src="./slider7.png" alt="picSlider7" className="w-[255px] h-[261px]" />
                         </figure>
                         <div className="w-full px-6 mt-6">
                             <p className="font-medium text-[18px] text-[#121212] leading-8">
-                            فرش دست بافت نگین مشهد زمینه فیلی
+                            فرش ماشینی فرش رادین طرح شاه عباسی آرامش زمینه کرم
                             </p> 
                         </div>
                         <div className="w-full flex justify-between px-6 mt-8">
                             <span className="text-[#121212] font-medium text-[16px]">قیمت :</span>
-                            <span className="text-[#121212] font-medium text-[18px]">۱۴/۵۰۰/۰۰۰ تومان</span>
+                            <span className="text-[#121212] font-medium text-[18px]">۶/۳۰۳/۰۰۰ تومان</span>
                         </div>
                         <div className="w-full flex justify-center px-6 mt-10">
                             <Link href='/' className="text-[#CB1B1B] border border-[#CB1B1B] rounded-[12px] py-3 w-full text-center text-[15px] font-bold ease-linear duration-700 hover:text-white hover:bg-[#CB1B1B]">مشاهده  بیشتر</Link>
@@ -69,15 +69,16 @@ function Slider2() {
                     </SwiperSlide>
                     <SwiperSlide className="border border-[#D9D9D9] rounded-[12px] p-4 max-w-[21.3%]">
                         <figure className="w-full flex justify-center">
-                            <img src="./slider4.png" alt="picSlider4" className="w-[255px] h-[261px]" />
+                            <img src="./slider8.png" alt="picSlider8" className="w-[255px] h-[261px]" />
                         </figure>
                         <div className="w-full px-6 mt-6">
                             <p className="font-medium text-[18px] text-[#121212] leading-8">
-                            فرش دست بافت سهند طرح آترینا زمینه سورمه ای                            </p> 
+                            فرش ماشینی فرش مشهد طرح افشان زمینه کرم                         
+                             </p> 
                         </div>
                         <div className="w-full flex justify-between px-6 mt-8">
                             <span className="text-[#121212] font-medium text-[16px]">قیمت :</span>
-                            <span className="text-[#121212] font-medium text-[18px]">۲۳۳/۰۰۰ تومان</span>
+                            <span className="text-[#121212] font-medium text-[18px]">۱۱/۶۰۰/۰۰۰ تومان</span>
                         </div>
                         <div className="w-full flex justify-center px-6 mt-10">
                             <Link href='/' className="text-[#CB1B1B] border border-[#CB1B1B] rounded-[12px] py-3 w-full text-center text-[15px] font-bold ease-linear duration-700 hover:text-white hover:bg-[#CB1B1B]">مشاهده  بیشتر</Link>
