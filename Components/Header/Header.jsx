@@ -3,7 +3,7 @@ import NavTop from "./NavTop";
 
 function Header() {
     return ( 
-        <header className="w-full py-[24px] px-[4%]">
+        <header className="w-full py-[25px] px-[6%]">
             <nav className="w-full grid grid-cols-12 border-b">
                 {/* top */}
                 <section className="col-span-12">

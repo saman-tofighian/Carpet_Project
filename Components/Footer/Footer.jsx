@@ -4,7 +4,7 @@ import { FaGithub } from "react-icons/fa6";
 export default function Footer() {
   return (
     <footer className="w-full bg-[#F9F9F9] mt-32">
-        <section className="w-full px-[4%] py-7 grid grid-cols-12 gap-x-16">
+        <section className="w-full px-[6%] py-7 grid grid-cols-12 gap-x-16">
             <div className="col-span-5">
                 <h3 className="text-[#CB1B1B] font-bold text-2xl">ایـــرانی  فرش</h3>
                 <p className="text-[16px] font-medium mt-5 leading-9">
@@ -52,6 +52,9 @@ export default function Footer() {
                         <img src="./en.png" alt="enamad" />
                     </figure>
                 </div>
+            </div>
+            <div className="col-span-12 flex justify-center mt-8">
+                <h3 className="text-[#505050] text-[1.2rem]">ساخته شده توسط <strong className="text-[#CB1B1B]">سامان توفیقیان</strong></h3>
             </div>
         </section>
     </footer>
