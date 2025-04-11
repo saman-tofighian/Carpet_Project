@@ -4,22 +4,22 @@ import Link from 'next/link';
 export default function Advertisement() {
   return (
     <section className='w-full mt-28 mb-10'>
-      <div className='w-full grid grid-cols-12 px-[6%] items-center'>
+      <div className='w-full grid grid-cols-12 px-[6%] items-center gap-y-14 lg:gap-y-0'>
         <motion.div
           initial={{ x: 800, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className='col-span-6 text-center px-[15%]'
+          className='col-span-12 lg:col-span-6 text-center px-[15%] order-2 lg:order-1'
         >
-          <h2 className='text-[#000000] font-medium text-[2.7rem]'>
+          <h2 className='text-[#000000] font-medium text-[1.6rem] lg:text-[2.7rem]'>
             عضویت در باشگاه مشتریان
           </h2>
-          <h2 className='text-[#CB1B1B] font-medium text-[2.7rem]'>
+          <h2 className='text-[#CB1B1B] font-medium text-[1.6rem] lg:text-[2.7rem]'>
             {' '}
             ایـــرانی فرش
           </h2>
-          <p className='text-[#121212] font-medium text-[1.3rem] mt-8 leading-11 text-wrap'>
+          <p className='text-[#121212] font-medium text-[1rem] lg:text-[1.3rem] mt-8 leading-11 text-wrap'>
             با عضویت در باشگاه مشتریان ایرانــی فرش زودتر از تخفیفات با خبر شوید
             و از امکان تحویل رایگان فرش های خود بهره مند شوید.
           </p>
@@ -37,9 +37,13 @@ export default function Advertisement() {
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1.4 }}
           viewport={{ once: true }}
-          className='col-span-6 flex justify-center'
+          className='col-span-12 lg:col-span-6 flex justify-center order-1 lg:order-2 pe-3 lg:pe-0'
         >
-          <img src='./advertisement.png' alt='carpet' />
+          <img
+            src='./advertisement.png'
+            alt='carpet'
+            className='w-[310px] h-[550px] md:w-[438px] md:h-[678px]'
+          />
         </motion.figure>
       </div>
     </section>
