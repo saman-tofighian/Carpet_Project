@@ -60,18 +60,16 @@ function Slider1() {
             spaceBetween={33}
             loop={true}
             autoplay={{
-              delay: 2500,
+              delay: 6000,
               disableOnInteraction: false,
-            }}
-            pagination={{
-              clickable: true,
             }}
             modules={[Autoplay, Pagination]}
             breakpoints={{
               0: { slidesPerView: 1 },
               640: { slidesPerView: 1 },
               768: { slidesPerView: 2 },
-              1024: { slidesPerView: 4 },
+              1024: { slidesPerView: 2 },
+              1450: { slidesPerView: 4 },
             }}
             className='mySwiper custom-pagination'
           >
@@ -93,8 +91,8 @@ function Slider1() {
                       className='w-[255px] h-[261px]'
                     />
                   </figure>
-                  <div className='w-full px-6 mt-6'>
-                    <p className='font-medium text-[15px] xl:text-[18px] text-[#121212] leading-8'>
+                  <div className='w-full px-6 md:px-0 lg:px-6 mt-6'>
+                    <p className='font-medium text-[15px] md:text-[14px] md:text-nowrap lg:text-wrap lg:text-[18px] xl:text-[#121212] leading-8'>
                       {val.title}
                     </p>
                   </div>
