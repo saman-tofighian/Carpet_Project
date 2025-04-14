@@ -3,6 +3,9 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { FaArrowLeft } from 'react-icons/fa6';
 import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { Autoplay, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 function Slider1() {
   const [data] = useState([
@@ -42,22 +45,40 @@ function Slider1() {
   return (
     <section className='w-full mt-16'>
       <div className='w-full px-[6%]'>
-        <div className='w-full flex items-center justify-between'>
+        <div className='w-full flex items-center md:justify-between'>
           <h3 className='font-bold text-2xl text-[#121212]'>فرش های دستبافت</h3>
           <Link
             href='/'
-            className='py-3 px-7 bg-transparent border border-[#CB1B1B] text-[#CB1B1B] rounded-[12px] flex justify-center items-center text-center gap-x-3 me-32 ease-linear duration-700 hover:bg-[#CB1B1B] hover:text-white'
+            className='py-3 px-7 bg-transparent border border-[#CB1B1B] text-[#CB1B1B] rounded-[12px]  justify-center items-center text-center gap-x-3  ease-linear duration-700 hover:bg-[#CB1B1B] hover:text-white hidden md:flex'
           >
             مشاهده همه
             <FaArrowLeft />
           </Link>
         </div>
         <div className='w-full mt-12'>
-          <Swiper spaceBetween={33} slidesPerView={4}>
+          <Swiper
+            spaceBetween={33}
+            loop={true}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            pagination={{
+              clickable: true,
+            }}
+            modules={[Autoplay, Pagination]}
+            breakpoints={{
+              0: { slidesPerView: 1 },
+              640: { slidesPerView: 1 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 4 },
+            }}
+            className='mySwiper custom-pagination'
+          >
             {data.map((val) => (
               <SwiperSlide
                 key={val.id}
-                className='border border-[#D9D9D9] rounded-[12px] p-4 max-w-[21.3%]'
+                className='border border-[#D9D9D9] rounded-[12px] p-4 '
               >
                 <motion.div
                   initial={{ opacity: 0 }}
@@ -73,7 +94,7 @@ function Slider1() {
                     />
                   </figure>
                   <div className='w-full px-6 mt-6'>
-                    <p className='font-medium text-[18px] text-[#121212] leading-8'>
+                    <p className='font-medium text-[15px] xl:text-[18px] text-[#121212] leading-8'>
                       {val.title}
                     </p>
                   </div>
