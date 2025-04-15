@@ -1,6 +1,13 @@
+import { motion } from 'framer-motion';
 export default function MottoRight() {
   return (
-    <div className='col-span-12 lg:col-span-6 xl:col-span-5 mt-10 order-2 lg:order-1'>
+    <motion.div
+      initial={{ x: 200, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      transition={{ duration: 1.4 }}
+      viewport={{ once: true }}
+      className='col-span-12 lg:col-span-6 xl:col-span-5 mt-10 order-2 lg:order-1'
+    >
       <h1 className='font-bold text-[#121212] text-center text-[24px] md:text-[33px] lg:text-[2.5rem]'>
         خرید راحت فرش،در <strong className='text-[#CB1B1B]'>ایرانی فرش</strong>
       </h1>
@@ -16,6 +23,6 @@ export default function MottoRight() {
           عضویت در باشگاه مشتریان
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 }

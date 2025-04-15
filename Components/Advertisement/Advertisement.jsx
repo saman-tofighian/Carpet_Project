@@ -6,7 +6,7 @@ export default function Advertisement() {
     <section className='w-full mt-28 mb-10'>
       <div className='w-full grid grid-cols-12 px-[6%] items-center gap-y-14 lg:gap-y-0'>
         <motion.div
-          initial={{ x: 800, opacity: 0 }}
+          initial={{ x: 200, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
@@ -33,7 +33,7 @@ export default function Advertisement() {
           </div>
         </motion.div>
         <motion.figure
-          initial={{ x: -800, opacity: 0 }}
+          initial={{ x: -200, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1.4 }}
           viewport={{ once: true }}
