@@ -2,7 +2,7 @@ import { CiLogin } from 'react-icons/ci';
 import { IoIosLogIn } from 'react-icons/io';
 import { SlBasket } from 'react-icons/sl';
 import { VscListSelection } from 'react-icons/vsc';
-export default function NavTop() {
+export default function NavTop({ openMobileOpen }) {
   return (
     <div className='w-full grid grid-cols-12'>
       {/* search */}
@@ -15,7 +15,10 @@ export default function NavTop() {
           className='w-[439px] max-w-[439px] p-3 outline-0 border-0 rounded-[12px] text-[#717171] bg-[#EDEDED] hidden xl:flex order-2'
           placeholder='جستجو  فرش'
         />
-        <button className='rounded-[8px] text-[#121212] p-3.5 bg-[#EDEDED] flex xl:hidden justify-center items-center text-center cursor-pointer font-extrabold order-1'>
+        <button
+          className='rounded-[8px] text-[#121212] p-3.5 bg-[#EDEDED] flex xl:hidden justify-center items-center text-center cursor-pointer font-extrabold order-1'
+          onClick={openMobileOpen}
+        >
           <VscListSelection size='1.4rem' />
         </button>
       </div>
