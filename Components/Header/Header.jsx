@@ -8,11 +8,12 @@ function Header() {
   return (
     <>
       <header className='w-full py-[25px] px-[6%]'>
-        <nav className='w-full grid grid-cols-12 border-b'>
+        <nav className='w-full grid grid-cols-12 mt-2.5'>
           {/* top */}
-          <section className='col-span-12 grid gap-y-5 xl:gap-y-0'>
+          <section className='col-span-12 grid gap-y-4 lg:gap-y-3 xl:gap-y-2'>
             <NavTop openMobileOpen={() => setIsMobileOpen(true)} />
             <NavBottom />
+            <hr />
           </section>
         </nav>
       </header>

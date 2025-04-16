@@ -6,24 +6,24 @@ export default function NavTop({ openMobileOpen }) {
   return (
     <div className='w-full grid grid-cols-12'>
       {/* search */}
-      <div className='col-span-7 xl:col-span-9 flex items-center gap-x-6'>
+      <div className='col-span-7 lg:col-span-9 flex items-center gap-x-6'>
         <span className='text-2xl text-[#CB1B1B] font-bold order-2 lg:order-1'>
           ایـــرانی فرش
         </span>
         <input
           type='search'
-          className='w-[439px] max-w-[439px] p-3 outline-0 border-0 rounded-[12px] text-[#717171] bg-[#EDEDED] hidden xl:flex order-2'
+          className='w-[439px] max-w-[439px] p-3 outline-0 border-0 rounded-[12px] text-[#717171] bg-[#EDEDED] hidden lg:flex order-2'
           placeholder='جستجو  فرش'
         />
         <button
-          className='rounded-[8px] text-[#121212] p-3.5 bg-[#EDEDED] flex xl:hidden justify-center items-center text-center cursor-pointer font-extrabold order-1'
+          className='rounded-[8px] text-[#121212] p-3.5 bg-[#EDEDED] flex lg:hidden justify-center items-center text-center cursor-pointer font-extrabold order-1'
           onClick={openMobileOpen}
         >
           <VscListSelection size='1.4rem' />
         </button>
       </div>
       {/* buttons */}
-      <div className='col-span-5 xl:col-span-3 flex items-center gap-x-4 justify-end'>
+      <div className='col-span-5 lg:col-span-3 flex items-center gap-x-4 justify-end'>
         <button className='border border-[#CB1B1B] rounded-[12px] text-[#CB1B1B] px-3 py-2.5 flex justify-center items-center text-center cursor-pointer ease-in-out duration-700 hover:bg-[#cb1b1b] hover:text-white'>
           <SlBasket size='1.4rem' />
         </button>

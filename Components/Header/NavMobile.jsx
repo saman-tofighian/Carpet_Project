@@ -6,7 +6,7 @@ export default function NavMobile({ isOpen, setIsOpen }) {
   return (
     <section
       className={`
-        fixed top-0 right-0 w-full h-full z-50 xl:hidden
+        fixed top-0 right-0 w-full h-full z-50 lg:hidden
         transition-all duration-1000 ease-linear
         ${
           isOpen
