@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { CiLogin } from 'react-icons/ci';
 import { IoIosLogIn } from 'react-icons/io';
 import { SlBasket } from 'react-icons/sl';
@@ -27,12 +28,18 @@ export default function NavTop({ openMobileOpen }) {
         <button className='border border-[#CB1B1B] rounded-[12px] text-[#CB1B1B] px-3 py-2.5 flex justify-center items-center text-center cursor-pointer ease-in-out duration-700 hover:bg-[#cb1b1b] hover:text-white'>
           <SlBasket size='1.4rem' />
         </button>
-        <button className='border border-[#CB1B1B] rounded-[12px] text-[#CB1B1B] px-3 py-2.5  flex xl:hidden justify-center items-center text-center cursor-pointer ease-in-out duration-700 hover:bg-[#cb1b1b] hover:text-white'>
+        <Link
+          href='/register'
+          className='border border-[#CB1B1B] rounded-[12px] text-[#CB1B1B] px-3 py-2.5  flex xl:hidden justify-center items-center text-center cursor-pointer ease-in-out duration-700 hover:bg-[#cb1b1b] hover:text-white'
+        >
           <IoIosLogIn size='1.4rem' />
-        </button>
-        <button className='px-5 py-2.5 border border-[#CB1B1B] rounded-[12px] text-[#CB1B1B] hidden xl:flex justify-center items-center text-center gap-2 cursor-pointer ease-in-out duration-700 hover:bg-[#cb1b1b] hover:text-white'>
+        </Link>
+        <Link
+          href='/register'
+          className='px-5 py-2.5 border border-[#CB1B1B] rounded-[12px] text-[#CB1B1B] hidden xl:flex justify-center items-center text-center gap-2 cursor-pointer ease-in-out duration-700 hover:bg-[#cb1b1b] hover:text-white'
+        >
           <CiLogin size='1.4rem' /> ورود / ثبت نام{' '}
-        </button>
+        </Link>
       </div>
     </div>
   );
