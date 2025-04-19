@@ -98,7 +98,7 @@ export default function Form() {
         <span className='font-medium text-[21px] text-black text-center'>
           حساب کاربری دارید؟{' '}
           <Link
-            href='/'
+            href='/login'
             className='text-[#CB1B1B] font-bold ease-linear duration-700 hover:text-green-700'
           >
             ورود
