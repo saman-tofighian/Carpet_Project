@@ -1,30 +1,47 @@
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useState } from 'react';
 
 export default function NavBottom() {
+  const pathName = usePathname();
+  const [data] = useState([
+    {
+      id: 1,
+      name: 'صفحه اصلی',
+      href: '/',
+    },
+    {
+      id: 2,
+      name: 'وبلاگ',
+      href: '/blog',
+    },
+    {
+      id: 3,
+      name: 'تماس با ما',
+      href: '/contact',
+    },
+    {
+      id: 4,
+      name: 'درباره ما',
+      href: '/about',
+    },
+  ]);
   return (
     <div className='w-full grid grid-cols-12 py-2.5'>
       <div className='col-span-12 hidden lg:block'>
         <ul className='flex items-center gap-x-8 my-5'>
-          <li>
-            <Link href='/' className='font-medium text-[16px] text-[#CB1B1B]'>
-              صفحه اصلی
-            </Link>
-          </li>
-          <li>
-            <Link href='/' className='font-medium text-[16px] text-[#121212] '>
-              وبلاگ
-            </Link>
-          </li>
-          <li>
-            <Link href='/' className='font-medium text-[16px] text-[#121212]'>
-              تماس با ما
-            </Link>
-          </li>
-          <li>
-            <Link href='/' className='font-medium text-[16px] text-[#121212] '>
-              درباره ما
-            </Link>
-          </li>
+          {data.map((val) => (
+            <li key={val.id}>
+              <Link
+                href={val.href}
+                className={`font-medium text-[16px] ${
+                  pathName === val.href ? 'text-[#CB1B1B]' : 'text-[#121212]'
+                }`}
+              >
+                {val.name}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
       <div className='col-span-12 block lg:hidden md:place-items-center'>
