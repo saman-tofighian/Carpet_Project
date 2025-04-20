@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Frame2() {
   return (
-    <section className='w-full mt-[5rem] pb-36'>
+    <section className='w-full mt-[6rem] pb-36'>
       <div className='w-full px-[6%] flex items-center flex-wrap gap-y-12 xl:gap-y-0 justify-center'>
         <div className='w-full md:w-[60%] lg:w-full xl:w-[55%] flex items-center justify-center gap-x-9  flex-wrap xl:flex-nowrap gap-y-10 xl:gap-y-0'>
           <figure className='relative w-full lg:w-[47%] xl:w-[65%] rounded-2xl bg-[url(/5f.png)] h-[318px] max-h-[318px] bg-cover flex items-end after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-gradient-to-r after:from-transparent after:to-[#013075] after:opacity-80 after:rounded-2xl'>

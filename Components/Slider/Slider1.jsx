@@ -43,7 +43,7 @@ function Slider1() {
     },
   ]);
   return (
-    <section className='w-full mt-16'>
+    <section className='w-full mt-4'>
       <div className='w-full px-[6%]'>
         <div className='w-full flex items-center md:justify-between'>
           <h3 className='font-bold text-2xl text-[#121212]'>فرش های دستبافت</h3>
