@@ -95,7 +95,7 @@ export default function Form() {
         >
           ثبت نام
         </button>
-        <span className='font-medium text-[21px] text-black text-center'>
+        <span className='font-medium text-[18px] md:text-[21px] text-black text-center'>
           حساب کاربری دارید؟{' '}
           <Link
             href='/login'

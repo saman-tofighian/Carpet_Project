@@ -3,7 +3,7 @@ import { FaLock, FaPhone } from 'react-icons/fa';
 
 export default function Form() {
   return (
-    <div className='col-span-6 px-10 xl:mt-32'>
+    <div className='col-span-12 md:col-span-10 md:col-start-2 lg:col-span-6 px-10 bg-[#FFFFFF] lg:bg-transparent rounded-[20px] py-10 lg:py-0 shadow lg:shadow-none lg:mt-32'>
       <div className='w-full flex justify-center flex-col mb-9 mt-7'>
         <h2 className='text-[#CB1B1B] font-bold mb-6 text-3xl text-center'>
           ایـــرانی فرش
@@ -47,7 +47,7 @@ export default function Form() {
         >
           ورود
         </button>
-        <span className='font-medium text-[21px] text-black text-center'>
+        <span className='font-medium text-[18px] md:text-[21px] text-black text-center'>
           ثبت نام نکرده اید؟همین حالا{' '}
           <Link
             href='/register'
