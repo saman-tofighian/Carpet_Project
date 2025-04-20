@@ -44,10 +44,10 @@ export default function NavBottom() {
           ))}
         </ul>
       </div>
-      <div className='col-span-12 block lg:hidden md:place-items-center'>
+      <div className='flex col-span-12 lg:hidden md:place-items-center'>
         <input
           type='search'
-          className='w-[439px] md:w-[500px] p-3 outline-0 border-0 rounded-[12px] text-[#717171] bg-[#EDEDED] flex lg:hidden'
+          className='w-full md:w-full p-3 outline-0 border-0 rounded-[12px] text-[#717171] bg-[#EDEDED] flex lg:hidden'
           placeholder='جستجو  فرش'
         />
       </div>
