@@ -1,7 +1,7 @@
 export default function Image() {
   return (
-    <figure className='col-span-6 relative'>
-      <div className='relative w-fit h-[700px] rounded-[48px] overflow-hidden'>
+    <figure className='col-span-12 md:col-span-10 md:col-start-2 lg:col-span-6'>
+      <div className='relative w-fit h-[700px] rounded-[48px] overflow-hidden border-red-700'>
         <img
           src='./si.png'
           alt='signup_image'
