@@ -1,13 +1,17 @@
 import Footer from '@/Components/Footer/Footer';
 import Header from '@/Components/Header/Header';
 import '@/styles/globals.css';
+import { useRouter } from 'next/router';
 
 export default function App({ Component, pageProps }) {
+  const router = useRouter();
+  const hideHeaderFooter = router.pathname === '/404';
+
   return (
     <>
-      <Header />
+      {!hideHeaderFooter && <Header />}
       <Component {...pageProps} />
-      <Footer />
+      {!hideHeaderFooter && <Footer />}
     </>
   );
 }
