@@ -1,9 +1,15 @@
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { FaLock, FaPhone } from 'react-icons/fa';
-
 export default function Form() {
   return (
-    <div className='col-span-12 md:col-span-10 md:col-start-2 lg:col-span-6 px-10 bg-[#FFFFFF] lg:bg-transparent rounded-[20px] py-10 lg:py-0 shadow lg:shadow-none lg:mt-32'>
+    <motion.div
+      initial={{ x: 50, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }}
+      className='col-span-12 md:col-span-10 md:col-start-2 lg:col-span-6 px-10 bg-[#FFFFFF] lg:bg-transparent rounded-[20px] py-10 lg:py-0 shadow lg:shadow-none lg:mt-32'
+    >
       <div className='w-full flex justify-center flex-col mb-9 mt-7'>
         <h2 className='text-[#CB1B1B] font-bold mb-6 text-3xl text-center'>
           ایـــرانی فرش
@@ -58,6 +64,6 @@ export default function Form() {
           شوید
         </span>
       </form>
-    </div>
+    </motion.div>
   );
 }
