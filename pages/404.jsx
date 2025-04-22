@@ -3,12 +3,12 @@ import Link from 'next/link';
 export default function NotFoundPage() {
   return (
     <section className='min-h-screen flex items-center justify-center bg-[#fdf8f2] px-4 py-16'>
-      <div className='w-full max-w-4xl text-center px-6 md:px-12'>
+      <div className='w-full max-w-4xl text-center px-6 md:px-12 lg:px-0'>
         <div className='relative w-full'>
           <img
             src='/404.png'
             alt='فرش گمشده'
-            className='mx-auto w-full max-w-[850px] h-[270px] lg:h-[550px] rounded-3xl shadow-xl object-center'
+            className='mx-auto w-full max-w-full h-[270px] lg:h-[550px] rounded-3xl shadow-xl object-center'
           />
           <h4 className='absolute top-4 left-3 bg-white bg-opacity-80 text-red-600 text-3xl font-black px-5 py-1 rounded-full shadow'>
             ۴۰۴
@@ -17,7 +17,7 @@ export default function NotFoundPage() {
 
         <div className='mt-16'>
           <h2 className='text-3xl md:text-4xl font-extrabold text-[#cb1b1b] mb-6 leading-14'>
-            ای بابا! انگار گلیم این صفحه از زیر پامون کشیده شده!
+            ای بابا ! انگار گلیم این صفحه از زیر پامون کشیده شده!
           </h2>
           <p className='text-[#444] text-lg md:text-xl mb-8'>
             صفحه‌ای که دنبالش می‌گردی پیدا نشد. شاید نخ فرشش گره خورده 🤷‍♂️
