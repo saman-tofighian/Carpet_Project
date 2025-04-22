@@ -1,8 +1,33 @@
 'use client';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useState } from 'react';
 import { MdOutlineClose } from 'react-icons/md';
 
 export default function NavMobile({ isOpen, setIsOpen }) {
+  const [data] = useState([
+    {
+      id: 1,
+      name: 'صفحه اصلی',
+      href: '/',
+    },
+    {
+      id: 2,
+      name: 'وبلاگ',
+      href: '/blog',
+    },
+    {
+      id: 3,
+      name: 'تماس با ما',
+      href: '/contact',
+    },
+    {
+      id: 4,
+      name: 'درباره ما',
+      href: '/about',
+    },
+  ]);
+  const pathName = usePathname();
   return (
     <section
       className={`
@@ -39,26 +64,18 @@ export default function NavMobile({ isOpen, setIsOpen }) {
         </div>
 
         <ul className='flex flex-col items-center my-10 gap-y-10 text-center'>
-          <li className='w-full'>
-            <Link href='/' className='font-medium text-[20px] text-[#CB1B1B]'>
-              صفحه اصلی
-            </Link>
-          </li>
-          <li className='w-full'>
-            <Link href='/' className='font-medium text-[20px] text-black'>
-              وبلاگ
-            </Link>
-          </li>
-          <li className='w-full'>
-            <Link href='/' className='font-medium text-[20px] text-black'>
-              تماس با ما
-            </Link>
-          </li>
-          <li className='w-full'>
-            <Link href='/' className='font-medium text-[20px] text-black'>
-              درباره ما
-            </Link>
-          </li>
+          {data.map((val) => (
+            <li className='w-full' key={val.id}>
+              <Link
+                href={val.href}
+                className={`font-medium text-[20px] ${
+                  pathName === val.href ? 'text-[#CB1B1B]' : 'text-[#121212]'
+                }`}
+              >
+                {val.name}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
     </section>
