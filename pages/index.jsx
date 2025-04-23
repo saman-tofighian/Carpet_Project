@@ -1,4 +1,5 @@
 import Advertisement from '@/Components/Advertisement/Advertisement';
+import Model from '@/Components/Carpet3d/Model';
 import Frame from '@/Components/Frame/Frame';
 import Frame2 from '@/Components/Frame/Frame2';
 import Motto from '@/Components/Motto/Motto';
@@ -22,6 +23,7 @@ function Home() {
       <Slider1 />
       <Frame2 />
       <Slider2 />
+      <Model />
       <Advertisement />
     </main>
   );
