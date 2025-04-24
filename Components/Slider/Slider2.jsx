@@ -48,7 +48,7 @@ function Slider2() {
         <div className='w-full flex items-center md:justify-between'>
           <h3 className='font-bold text-2xl text-[#121212]'>فرش های دستبافت</h3>
           <Link
-            href='/'
+            href='/products'
             className='py-3 px-7 bg-transparent border border-[#CB1B1B] text-[#CB1B1B] rounded-[12px]  justify-center items-center text-center gap-x-3  ease-linear duration-700 hover:bg-[#CB1B1B] hover:text-white hidden md:flex'
           >
             مشاهده همه
