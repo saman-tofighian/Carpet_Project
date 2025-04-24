@@ -43,6 +43,7 @@ export default function Advertisement() {
             src='./advertisement.png'
             alt='carpet'
             className='w-[310px] h-[550px] md:w-[438px] md:h-[678px]'
+            loading='lazy'
           />
         </motion.figure>
       </div>

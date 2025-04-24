@@ -89,6 +89,7 @@ function Slider1() {
                       src={val.image}
                       alt={val.alt}
                       className='w-[255px] h-[261px]'
+                      loading='lazy'
                     />
                   </figure>
                   <div className='w-full px-6 md:px-0 lg:px-6 mt-6'>

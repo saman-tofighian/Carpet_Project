@@ -13,6 +13,7 @@ export default function MottoLeft() {
           src='./carpet.png'
           alt='carpet'
           className='w-[328px] h-[434px] md:w-[527px] md:h-[470px]'
+          loading='lazy'
         />
       </figure>
     </motion.div>
