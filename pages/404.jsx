@@ -6,7 +6,7 @@ export default function NotFoundPage() {
       <div className='w-full max-w-4xl text-center px-6 md:px-12 lg:px-0'>
         <div className='relative w-full'>
           <img
-            src='/404.png'
+            src='/image.jpg'
             alt='فرش گمشده'
             className='mx-auto w-full max-w-full h-[270px] lg:h-[550px] rounded-3xl shadow-xl object-center'
           />

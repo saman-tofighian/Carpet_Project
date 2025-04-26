@@ -8,7 +8,7 @@ export default function NavTop({ openMobileOpen }) {
     <div className='w-full grid grid-cols-12'>
       {/* search */}
       <div className='col-span-7 lg:col-span-9 flex items-center gap-x-6'>
-        <span className='text-2xl text-[#CB1B1B] font-bold order-2 lg:order-1'>
+        <span className='text-[19px] sm:text-2xl text-[#CB1B1B] font-bold order-2 lg:order-1'>
           ایـــرانی فرش
         </span>
         <input
