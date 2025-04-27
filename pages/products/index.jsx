@@ -1,3 +1,4 @@
+import Product from '@/Components/Product/Product';
 import Link from 'next/link';
 import { IoMdHome } from 'react-icons/io';
 export default function Products() {
@@ -55,6 +56,9 @@ export default function Products() {
               </li>
             </ol>
           </nav>
+        </div>
+        <div className='col-span-9 mt-16'>
+          <Product />
         </div>
       </div>
     </section>

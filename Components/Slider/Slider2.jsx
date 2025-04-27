@@ -15,7 +15,7 @@ function Slider2() {
       alt: 'picSlider5',
       title: 'فرش ماشینی ماهساره طرح آترینا زمینه آبی',
       price: '۱۳/۵۰۰/۰۰۰ تومان',
-      delay: 0.5,
+      delay: 0.3,
     },
     {
       id: 2,
@@ -23,7 +23,7 @@ function Slider2() {
       alt: 'picSlider6',
       title: 'فرش ماشینی لوکس سهند زمینه سرمه ای ',
       price: '۲۳۳/۰۰۰ تومان',
-      delay: 1,
+      delay: 0.6,
     },
     {
       id: 3,
@@ -31,7 +31,7 @@ function Slider2() {
       alt: 'picSlider7',
       title: 'فرش ماشینی رادین طرح شاه عباسی زمینه کرم',
       price: '۶/۳۰۳/۰۰۰ تومان',
-      delay: 1.5,
+      delay: 0.9,
     },
     {
       id: 4,
@@ -39,7 +39,7 @@ function Slider2() {
       alt: 'picSlider8',
       title: 'فرش ماشینی مشهد طرح افشان زمینه کرم ',
       price: '۱۱/۶۰۰/۰۰۰ تومان',
-      delay: 2,
+      delay: 1.2,
     },
   ]);
   return (
