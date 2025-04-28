@@ -1,4 +1,6 @@
 import Product from '@/Components/Product/Product';
+import Seller from '@/Components/Product/Seller';
+import Slider3 from '@/Components/Slider/Slider3';
 import Link from 'next/link';
 import { IoMdHome } from 'react-icons/io';
 export default function Products() {
@@ -57,8 +59,14 @@ export default function Products() {
             </ol>
           </nav>
         </div>
-        <div className='col-span-9 mt-16'>
+        <div className='col-span-9 mt-16 px-3.5'>
           <Product />
+        </div>
+        <div className='col-span-3 mt-16 flex items-center px-3.5'>
+          <Seller />
+        </div>
+        <div className='col-span-12 mt-10'>
+          <Slider3 />
         </div>
       </div>
     </section>

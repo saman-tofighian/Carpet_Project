@@ -65,6 +65,11 @@ export default function () {
               اکلیریک هیت ست شده
             </h6>
           </div>
+          <div className='col-span-12 p-3.5 rounded-[8px] flex justify-center mt-5'>
+            <button className='text-[#CB1B1B] border border-[#CB1B1B] px-5 py-3 rounded-[12px] cursor-pointer duration-700 ease-linear hover:bg-[#cb1b1b] hover:text-white'>
+              مشاهده همه ویژگی ها
+            </button>
+          </div>
         </div>
       </div>
     </div>
