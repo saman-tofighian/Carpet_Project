@@ -3,8 +3,10 @@ import { FaShop, FaStar } from 'react-icons/fa6';
 export default function Seller() {
   return (
     <div className='w-full'>
-      <div className='border border-[#ADADAD] px-4 py-8 rounded-[12px]'>
-        <h6 className='text-[#121212] font-bold text-[16px]'>فروشنده</h6>
+      <div className='border-b md:border border-[#ADADAD] px-4 py-8 rounded-[12px]'>
+        <h6 className='text-[#121212] font-bold text-[20px] xl:text-[16px]'>
+          فروشنده
+        </h6>
         <h5 className='text-[#212121] font-bold mt-4 flex gap-x-2 items-center'>
           <FaShop />
           شرکت فرش سهند

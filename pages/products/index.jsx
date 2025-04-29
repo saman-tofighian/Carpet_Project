@@ -59,10 +59,10 @@ export default function Products() {
             </ol>
           </nav>
         </div>
-        <div className='col-span-9 mt-16 px-3.5'>
+        <div className='col-span-12 xl:col-span-9 mt-10 xl:mt-16 px-3.5'>
           <Product />
         </div>
-        <div className='col-span-3 mt-16 flex items-center px-3.5'>
+        <div className='col-span-12 md:col-span-8 md:col-start-3 xl:col-span-3 mt-2 md:mt-16 flex items-center xl:px-3.5'>
           <Seller />
         </div>
         <div className='col-span-12 mt-10'>
