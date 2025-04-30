@@ -3,7 +3,7 @@ import { useState } from 'react';
 export default function () {
   const [showFeatures, setShowFeatures] = useState(false);
   return (
-    <div className='col-span-12 xl:col-span-6 px-3'>
+    <div className='col-span-12 xl:col-span-6 xl:px-3'>
       <h6 className='text-[#CB1B1B] font-bold text-[16px] hidden xl:flex'>
         فرش ماهساره / فرش ماشینی ماهساره
       </h6>
@@ -21,7 +21,7 @@ export default function () {
       </div>
       <div className='w-full mt-8 xl:mt-14'>
         <h6 className='text-[#000000] font-medium text-[18px]'>ویژگی ها</h6>
-        <div className='w-full grid grid-cols-12 mt-6 gap-8'>
+        <div className='w-full grid grid-cols-12 mt-6 gap-x-6 gap-y-8 xl:gap-x-8'>
           <div className='col-span-6 sm:col-span-5 sm:col-start-2 md:col-span-4 md:col-start-3 lg:col-span-3 lg:col-start-4 xl:col-span-6 bg-[#EDEDED] p-3.5 rounded-[8px]'>
             <h6 className='text-[14px] text-[#353535] font-medium'>
               کیفیت فرش
