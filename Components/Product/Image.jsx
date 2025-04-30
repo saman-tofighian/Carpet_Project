@@ -2,7 +2,11 @@ export default function Image() {
   return (
     <figure className='col-span-12 md:col-start-2 lg:col-start-4 xl:col-span-6 flex flex-wrap'>
       <div className='w-full'>
-        <img src='slider5.png' alt='img1' className='h-[540px] rounded-[8px]' />
+        <img
+          src='slider5.png'
+          alt='img1'
+          className='h-[400px] sm:h-[500px] md:h-[540px] rounded-[8px]'
+        />
       </div>
       <div className='w-full gap-x-8 mt-12 px-8 hidden xl:flex'>
         <figure className='rounded-[8px] w-[100px] h-[100px] border border-[#CBCBCB] p-2.5'>
