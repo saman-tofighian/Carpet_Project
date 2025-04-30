@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 import { FaEnvelope, FaLock, FaPhone, FaRegUser, FaUser } from 'react-icons/fa';
@@ -17,10 +18,24 @@ export default function Form() {
 
   const { firstName, lastName, email, password, phone } = formData;
 
+  const router = useRouter();
+
   const registerHandler = (e) => {
     e.preventDefault();
     if (firstName && lastName && email && password && phone) {
       toast.success(`${firstName} عزیز ثبت نام شما با موفقیت ثبت شد`);
+      setTimeout(() => {
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          password: '',
+          phone: '',
+        });
+      }, 3500);
+      setTimeout(() => {
+        router.push('/');
+      }, 4500);
     } else {
       toast.error('تمام فیلد ها باید پر شوند!');
     }
@@ -66,6 +81,7 @@ export default function Form() {
               onChange={(e) =>
                 setFormData({ ...formData, firstName: e.target.value })
               }
+              value={firstName}
             />
             <label
               htmlFor='firstName'
@@ -88,6 +104,7 @@ export default function Form() {
               onChange={(e) =>
                 setFormData({ ...formData, lastName: e.target.value })
               }
+              value={lastName}
             />
             <label
               htmlFor='lastName'
@@ -110,6 +127,7 @@ export default function Form() {
               onChange={(e) =>
                 setFormData({ ...formData, email: e.target.value })
               }
+              value={email}
             />
             <label htmlFor='email' className={getLabelClass('email', email)}>
               ایمیل
@@ -129,6 +147,7 @@ export default function Form() {
               onChange={(e) =>
                 setFormData({ ...formData, password: e.target.value })
               }
+              value={password}
             />
             <label
               htmlFor='password'
@@ -151,6 +170,7 @@ export default function Form() {
               onChange={(e) =>
                 setFormData({ ...formData, phone: e.target.value })
               }
+              value={phone}
             />
             <label htmlFor='phone' className={getLabelClass('phone', phone)}>
               شماره موبایل
