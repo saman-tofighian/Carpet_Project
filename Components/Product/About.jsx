@@ -19,7 +19,7 @@ export default function () {
           شش متری ( ۳۰۰ * ۲۰۰ )
         </span>
       </div>
-      <div className='w-full mt-8 xl:mt-14'>
+      <div className='w-full mt-8 xl:mt-9'>
         <h6 className='text-[#000000] font-medium text-[18px]'>ویژگی ها</h6>
         <div className='w-full grid grid-cols-12 mt-6 gap-x-6 gap-y-8 xl:gap-x-8'>
           <div className='col-span-6 sm:col-span-5 sm:col-start-2 md:col-span-4 md:col-start-3 lg:col-span-3 lg:col-start-4 xl:col-span-6 bg-[#EDEDED] p-3.5 rounded-[8px]'>
