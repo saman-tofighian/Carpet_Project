@@ -25,9 +25,12 @@ export default function NavTop({ openMobileOpen }) {
       </div>
       {/* buttons */}
       <div className='col-span-5 lg:col-span-3 flex items-center gap-x-4 justify-end'>
-        <button className='border border-[#CB1B1B] rounded-[12px] text-[#CB1B1B] px-3 py-2.5 flex justify-center items-center text-center cursor-pointer ease-in-out duration-700 hover:bg-[#cb1b1b] hover:text-white'>
+        <Link
+          href='/shopping'
+          className='border border-[#CB1B1B] rounded-[12px] text-[#CB1B1B] px-3 py-2.5 flex justify-center items-center text-center cursor-pointer ease-in-out duration-700 hover:bg-[#cb1b1b] hover:text-white'
+        >
           <SlBasket size='1.4rem' />
-        </button>
+        </Link>
         <Link
           href='/register'
           className='border border-[#CB1B1B] rounded-[12px] text-[#CB1B1B] px-3 py-2.5  flex xl:hidden justify-center items-center text-center cursor-pointer ease-in-out duration-700 hover:bg-[#cb1b1b] hover:text-white'

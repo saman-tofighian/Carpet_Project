@@ -5,15 +5,15 @@ import { IoMdHome } from 'react-icons/io';
 
 export default function Shopping() {
   return (
-    <section className='w-full mt-8'>
+    <section className='w-full mt-8 mb-10 xl:mb-28'>
       <div className='w-full grid grid-cols-12 px-[6%] xl:gap-x-28'>
         <div className='col-span-12'>
-          <nav aria-label='breadcrumb' dir='rtl'>
+          <nav aria-label='breadcrumb' dir='rtl' className='w-full'>
             <ol className='inline-flex items-center space-x-reverse space-x-2 py-2 text-sm font-medium'>
               <li className='inline-flex items-center'>
                 <Link
                   href='/'
-                  className='text-[#CB1B1B] text-[18px] flex items-center gap-x-2'
+                  className='text-[#CB1B1B] text-[14px] sm:text-[16px] md:text-[18px] flex items-center gap-x-2'
                 >
                   <IoMdHome size='1.5rem' />
                   خانه
@@ -32,7 +32,10 @@ export default function Shopping() {
                     clipRule='evenodd'
                   ></path>
                 </svg>
-                <Link href='/' className='text-[#CB1B1B] text-[18px]'>
+                <Link
+                  href='/'
+                  className='text-[#CB1B1B] text-[14px] sm:text-[16px] md:text-[18px]'
+                >
                   فرش ماشینی
                 </Link>
               </li>
@@ -52,7 +55,10 @@ export default function Shopping() {
                     clipRule='evenodd'
                   ></path>
                 </svg>
-                <Link className='text-[#CB1B1B] text-[18px]' href='/'>
+                <Link
+                  className='text-[#CB1B1B] text-[14px] sm:text-[16px] md:text-[18px]'
+                  href='/'
+                >
                   ماهساره
                 </Link>
               </li>
@@ -72,17 +78,20 @@ export default function Shopping() {
                     clipRule='evenodd'
                   ></path>
                 </svg>
-                <Link className='text-[#909090] text-[18px]' href='/'>
+                <Link
+                  className='text-[#909090] text-[14px] sm:text-[16px] md:text-[18px]'
+                  href='/'
+                >
                   سبد خرید
                 </Link>
               </li>
             </ol>
           </nav>
         </div>
-        <div className='col-span-8 border border-[#ADADAD] py-14 px-6 rounded-[12px] mt-8'>
+        <div className='col-span-12 sm:col-span-10 sm:col-start-2 md:col-span-8 md:col-start-3 lg:col-span-6 lg:col-start-4 xl:col-span-8 border border-[#ADADAD] py-14 px-6 rounded-[12px] mt-8'>
           <ShoppingCart />
         </div>
-        <div className='col-span-4 mt-8'>
+        <div className='col-span-12 sm:col-span-10 sm:col-start-2 md:col-span-8 md:col-start-3 lg:col-span-6 lg:col-start-4 xl:col-span-4 mt-8'>
           <Seller />
         </div>
       </div>

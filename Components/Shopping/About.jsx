@@ -1,8 +1,8 @@
 import { FaMinus, FaPlus } from 'react-icons/fa6';
 export default function About() {
   return (
-    <div className='col-span-8 mt-2'>
-      <h5 className='font-bold text-[20px] text-[#121212]'>
+    <div className='col-span-12 xl:col-span-8 mt-2'>
+      <h5 className='font-bold text-[16px] sm:text-[18px] md:text-[20px] text-[#121212]'>
         فرش ماشینی ماهساره طرح آترینا زمینه آبی
       </h5>
       <span className='block mt-4 text-[#121212] font-medium'>رنگ : آبی</span>

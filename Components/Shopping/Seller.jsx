@@ -1,7 +1,7 @@
 export default function Seller() {
   return (
     <div className='w-full'>
-      <div className='border-b md:border border-[#ADADAD] px-6 py-8 rounded-[12px]'>
+      <div className='border border-[#ADADAD] px-6 py-8 rounded-[12px]'>
         <div className='w-full flex justify-between'>
           <span className='text-[#000000] font-bold text-[18px]'>
             تعداد فرش :
