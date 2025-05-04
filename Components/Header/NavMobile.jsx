@@ -19,7 +19,7 @@ export default function NavMobile({ isOpen, setIsOpen }) {
     {
       id: 3,
       name: 'تماس با ما',
-      href: '/contact',
+      href: '/contactus',
     },
     {
       id: 4,

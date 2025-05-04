@@ -18,7 +18,7 @@ export default function NavBottom() {
     {
       id: 3,
       name: 'تماس با ما',
-      href: '/contact',
+      href: '/contactus',
     },
     {
       id: 4,
