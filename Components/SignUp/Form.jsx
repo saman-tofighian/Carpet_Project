@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import { useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 import { FaEnvelope, FaLock, FaPhone, FaRegUser, FaUser } from 'react-icons/fa';
-
+import { FaSpinner } from 'react-icons/fa6';
 export default function Form() {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -19,12 +19,15 @@ export default function Form() {
   const { firstName, lastName, email, password, phone } = formData;
 
   const router = useRouter();
+  const [loading, setLoading] = useState(false);
 
   const registerHandler = (e) => {
     e.preventDefault();
     if (firstName && lastName && email && password && phone) {
+      setLoading(true);
       toast.success(`${firstName} عزیز ثبت نام شما با موفقیت ثبت شد`);
       setTimeout(() => {
+        setLoading(false);
         setFormData({
           firstName: '',
           lastName: '',
@@ -179,10 +182,11 @@ export default function Form() {
           </div>
 
           <button
-            className='bg-[#CB1B1B] text-white py-3.5 rounded-[12px] text-[18px] font-bold cursor-pointer ease-linear duration-700 hover:bg-green-700'
+            className='bg-[#CB1B1B] text-white py-3.5 rounded-[12px] text-[18px] font-bold cursor-pointer ease-linear duration-700 hover:bg-green-700 flex justify-center items-center gap-x-3'
             onClick={registerHandler}
           >
             ثبت نام
+            {loading && <FaSpinner className='animate-spin' />}
           </button>
 
           <span className='font-medium text-[18px] md:text-[21px] text-black text-center'>
