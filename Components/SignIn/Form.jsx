@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import { useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 import { FaLock, FaPhone } from 'react-icons/fa';
+import { FaSpinner } from 'react-icons/fa6';
 export default function Form() {
   const [formData, setFormData] = useState({
     phone: '',
@@ -12,22 +13,39 @@ export default function Form() {
   const [focusedField, setFocusedField] = useState('');
   const { password, phone } = formData;
   const router = useRouter();
+  let ErrorMessage = '';
+  const [loading, setLoading] = useState(false);
   const registerHandler = (e) => {
     e.preventDefault();
-    if (password && phone) {
-      toast.success('ورود موفق / خوش آمدید');
-      setTimeout(() => {
-        setFormData({
-          password: '',
-          phone: '',
-        });
-      }, 3500);
-      setTimeout(() => {
-        router.push('/');
-      }, 4500);
-    } else {
-      toast.error('تمام فیلد ها باید پر شوند!');
+
+    if (!password || !phone) {
+      return toast.error('تمام فیلد ها باید پر شوند!');
     }
+
+    if (
+      password.length < 8 ||
+      !password.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/)
+    ) {
+      ErrorMessage += 'رمز عبور نادرسته!' + '\n';
+    }
+    if (phone.length > 11 || !phone.match(/09\d{9}/)) {
+      ErrorMessage += 'شماره تلفن باید 11 رقم باشد و با 98 شروع بشه' + '\n';
+    }
+    if (ErrorMessage) {
+      return toast.error(ErrorMessage);
+    }
+    setLoading(true);
+    toast.success('ورود موفق / خوش آمدید');
+    setTimeout(() => {
+      setLoading(false);
+      setFormData({
+        password: '',
+        phone: '',
+      });
+    }, 3500);
+    setTimeout(() => {
+      router.push('/');
+    }, 4500);
   };
   const getLabelClass = (fieldName, value) => {
     return `absolute right-11 transition-all bg-white px-1 ${
@@ -97,10 +115,11 @@ export default function Form() {
             <FaPhone className='absolute right-4 top-1/2 -translate-y-1/2 text-[#888]' />
           </div>
           <button
-            className='bg-[#CB1B1B] text-white py-3.5 rounded-[12px] text-[18px] font-bold cursor-pointer ease-linear duration-700 hover:bg-green-700'
+            className='bg-[#CB1B1B] text-white py-3.5 rounded-[12px] text-[18px] font-bold cursor-pointer ease-linear duration-700 hover:bg-green-700 flex justify-center items-center gap-x-3'
             onClick={registerHandler}
           >
             ورود
+            {loading && <FaSpinner className='animate-spin' />}
           </button>
           <span className='font-medium text-[18px] md:text-[21px] text-black text-center'>
             ثبت نام نکرده اید؟همین حالا{' '}

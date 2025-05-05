@@ -18,30 +18,55 @@ export default function Form() {
 
   const { firstName, lastName, email, password, phone } = formData;
 
+  let ErrorMessage = '';
+
   const router = useRouter();
   const [loading, setLoading] = useState(false);
 
   const registerHandler = (e) => {
     e.preventDefault();
-    if (firstName && lastName && email && password && phone) {
-      setLoading(true);
-      toast.success(`${firstName} عزیز ثبت نام شما با موفقیت ثبت شد`);
-      setTimeout(() => {
-        setLoading(false);
-        setFormData({
-          firstName: '',
-          lastName: '',
-          email: '',
-          password: '',
-          phone: '',
-        });
-      }, 3500);
-      setTimeout(() => {
-        router.push('/');
-      }, 4500);
-    } else {
-      toast.error('تمام فیلد ها باید پر شوند!');
+    if (!firstName || !lastName || !email || !password || !phone) {
+      return toast.error('تمام فیلد ها باید پر شوند!');
     }
+
+    // data validation
+    if (firstName.length < 3 || firstName.length > 15) {
+      ErrorMessage += 'نام باید بین 3 تا 15 کاراکتر باشد!' + '\n';
+    }
+    if (lastName.length < 3 || lastName.length > 15) {
+      ErrorMessage += 'نام خانوادگی باید بین 3 تا 15 کاراکتر باشد!' + '\n';
+    }
+    if (email.length < 13 || !email.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)) {
+      ErrorMessage += 'ایمیل نادرسته!' + '\n';
+    }
+    if (
+      password.length < 8 ||
+      !password.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/)
+    ) {
+      ErrorMessage += 'رمز عبور نادرسته!' + '\n';
+    }
+    if (phone.length > 11 || !phone.match(/09\d{9}/)) {
+      ErrorMessage += 'شماره تلفن باید 11 رقم باشد و با 98 شروع بشه' + '\n';
+    }
+    if (ErrorMessage) {
+      return toast.error(ErrorMessage);
+    }
+
+    setLoading(true);
+    toast.success(`${firstName} عزیز ثبت نام شما با موفقیت ثبت شد`);
+    setTimeout(() => {
+      setLoading(false);
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        password: '',
+        phone: '',
+      });
+    }, 3500);
+    setTimeout(() => {
+      router.push('/');
+    }, 4500);
   };
 
   const getLabelClass = (fieldName, value) => {
