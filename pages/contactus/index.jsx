@@ -5,8 +5,32 @@ import { FaSpinner } from 'react-icons/fa6';
 export default function ContactUs() {
   const formRef = useRef();
   const [loading, setLoading] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const { name, email, message } = formData;
+  let ErrorMessage = '';
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!name || !email || !message) {
+      return toast.error('تمام فیلد ها باید پر شوند!');
+    }
+    if (name.length < 3 || name.length > 23) {
+      ErrorMessage += 'نام باید بین 3 تا 23 کاراکتر باشد!' + '\n';
+    }
+    if (email.length < 13 || !email.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)) {
+      ErrorMessage += 'ایمیل نادرسته!' + '\n';
+    }
+    if (message.length < 5) {
+      ErrorMessage += 'متن پیام کوتاه است!' + '\n';
+    }
+    if (ErrorMessage) {
+      return toast.error(ErrorMessage);
+    }
     setLoading(true);
     emailjs
       .sendForm(
@@ -49,8 +73,10 @@ export default function ContactUs() {
               <input
                 type='text'
                 name='name'
-                required
                 placeholder='مثلاً سامان توفیقیان'
+                onChange={(e) =>
+                  setFormData({ ...formData, name: e.target.value })
+                }
                 className='w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:border-[#CB1B1B]'
               />
             </div>
@@ -59,8 +85,10 @@ export default function ContactUs() {
               <input
                 type='email'
                 name='email'
-                required
                 placeholder='example@email.com'
+                onChange={(e) =>
+                  setFormData({ ...formData, email: e.target.value })
+                }
                 className='w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:border-[#CB1B1B]'
               />
             </div>
@@ -69,8 +97,10 @@ export default function ContactUs() {
               <textarea
                 name='message'
                 rows='5'
-                required
                 placeholder='پیام خود را بنویسید...'
+                onChange={(e) =>
+                  setFormData({ ...formData, message: e.target.value })
+                }
                 className='w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:border-[#CB1B1B] resize-none'
               />
             </div>
