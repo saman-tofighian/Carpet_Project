@@ -10,7 +10,7 @@ export default function MottoLeft() {
     >
       <figure className='w-full flex justify-center lg:justify-end xl:pl-16 h-[450px]'>
         <img
-          src='./carpet.png'
+          src='./motto.webp'
           alt='carpet'
           className='w-[328px] h-[434px] md:w-[527px] md:h-[470px]'
           loading='lazy'

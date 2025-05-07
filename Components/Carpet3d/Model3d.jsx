@@ -1,7 +1,7 @@
 import { OrbitControls, Stage, useGLTF } from '@react-three/drei';
 
 export default function Model3d() {
-  const model = useGLTF('./ct2.glb');
+  const model = useGLTF('./ct.glb');
   model.scene.rotation.set(1.5, 3, 0);
   return (
     <>

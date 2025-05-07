@@ -40,7 +40,7 @@ export default function Advertisement() {
           className='col-span-12 lg:col-span-6 flex justify-center order-1 lg:order-2 pe-3 lg:pe-0'
         >
           <img
-            src='./advertisement.png'
+            src='./advertisement.webp'
             alt='carpet'
             className='w-[310px] h-[550px] md:w-[438px] md:h-[678px]'
             loading='lazy'

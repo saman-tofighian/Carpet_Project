@@ -11,7 +11,7 @@ function Slider2() {
   const [data] = useState([
     {
       id: 1,
-      image: './slider5.png',
+      image: './slider5.webp',
       alt: 'picSlider5',
       title: 'فرش ماشینی ماهساره طرح آترینا زمینه آبی',
       price: '۱۳/۵۰۰/۰۰۰ تومان',
@@ -19,7 +19,7 @@ function Slider2() {
     },
     {
       id: 2,
-      image: './slider6.png',
+      image: './slider6.webp',
       alt: 'picSlider6',
       title: 'فرش ماشینی لوکس سهند زمینه سرمه ای ',
       price: '۲۳۳/۰۰۰ تومان',
@@ -27,7 +27,7 @@ function Slider2() {
     },
     {
       id: 3,
-      image: './slider7.png',
+      image: './slider7.webp',
       alt: 'picSlider7',
       title: 'فرش ماشینی رادین طرح شاه عباسی زمینه کرم',
       price: '۶/۳۰۳/۰۰۰ تومان',
@@ -35,7 +35,7 @@ function Slider2() {
     },
     {
       id: 4,
-      image: './slider8.png',
+      image: './slider8.webp',
       alt: 'picSlider8',
       title: 'فرش ماشینی مشهد طرح افشان زمینه کرم ',
       price: '۱۱/۶۰۰/۰۰۰ تومان',
@@ -107,7 +107,7 @@ function Slider2() {
                   </div>
                   <div className='w-full flex justify-center px-6 mt-10'>
                     <Link
-                      href='/'
+                      href={`/products/${val.id}`}
                       className='text-[#CB1B1B] border border-[#CB1B1B] rounded-[12px] py-3 w-full text-center text-[15px] font-bold ease-linear duration-700 hover:text-white hover:bg-[#CB1B1B]'
                     >
                       مشاهده بیشتر
