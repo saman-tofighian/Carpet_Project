@@ -3,7 +3,7 @@ export default function AboutUs() {
     <div className='w-full bg-white text-right px-6 md:px-20 py-5 xl:py-8 text-gray-800'>
       <div className='relative w-full h-60 md:h-96 mb-10 rounded-xl overflow-hidden'>
         <img
-          src='/6f.png'
+          src='/6f.webp'
           alt='درباره ما'
           className='w-full h-full object-center'
         />

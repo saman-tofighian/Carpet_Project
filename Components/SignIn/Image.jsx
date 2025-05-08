@@ -10,7 +10,7 @@ export default function Image() {
     >
       <div className='relative w-fit h-[700px] rounded-[48px] overflow-hidden border-red-700'>
         <img
-          src='./si.png'
+          src='./si.webp'
           alt='signup_image'
           className='w-full h-full object-cover'
           loading='lazy'
