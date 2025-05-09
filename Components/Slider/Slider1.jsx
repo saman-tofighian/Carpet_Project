@@ -14,7 +14,7 @@ function Slider1() {
       image: './slider1.webp',
       alt: 'picSlider1',
       title: 'فرش کهن دست بافت سهند زمینه سرمه ای',
-      price: '۲۳۳/۰۰۰ تومان',
+      price: '۲۳۳,۰۰۰ تومان',
       delay: 0.3,
     },
     {
@@ -22,7 +22,7 @@ function Slider1() {
       image: './slider2.webp',
       alt: 'picSlider2',
       title: 'فرش دست بافت زانیس ماربل زمینه نوک مدادی',
-      price: '۴۹/۹۲۰ تومان',
+      price: '۴۹,۹۲۰ تومان',
       delay: 0.6,
     },
     {
@@ -30,7 +30,7 @@ function Slider1() {
       image: './slider3.webp',
       alt: 'picSlider3',
       title: 'فرش دست بافت نگین مشهد زمینه فیلی',
-      price: '۱۴/۵۰۰/۰۰۰ تومان',
+      price: '۱۴,۵۰۰,۰۰۰ تومان',
       delay: 0.9,
     },
     {
@@ -38,7 +38,7 @@ function Slider1() {
       image: './slider4.webp',
       alt: 'picSlider4',
       title: 'فرش دست بافت سهندآترینا زمینه سورمه ای',
-      price: '۲۳۳/۰۰۰ تومان',
+      price: '۲۳۳,۰۰۰ تومان',
       delay: 1.2,
     },
   ]);

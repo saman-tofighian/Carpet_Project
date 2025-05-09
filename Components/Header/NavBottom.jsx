@@ -34,7 +34,7 @@ export default function NavBottom() {
             <li key={val.id}>
               <Link
                 href={val.href}
-                className={`font-medium text-[16px] ${
+                className={`font-bold text-[18px] ${
                   pathName === val.href ? 'text-[#CB1B1B]' : 'text-[#121212]'
                 }`}
               >

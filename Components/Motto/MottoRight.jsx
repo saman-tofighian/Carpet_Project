@@ -16,10 +16,10 @@ export default function MottoRight() {
         بی نظیر فرش ها لذت ببر.
       </p>
       <div className='w-full flex justify-evenly md:justify-center lg:justify-evenly items-center mt-14 gap-x-4 md:gap-x-8 lg:gap-x-2 xl:gap-x-0 flex-col gap-y-6 sm:flex-row sm:gap-y-0'>
-        <button className='outline-0 rounded-[12px] border border-[#CB1B1B] text-[#CB1B1B] p-3 lg:p-3.5 bg-transparent cursor-pointer ease-in-out duration-700 hover:bg-[#cb1b1b] hover:text-white text-[15px] xl:text-[16px]'>
+        <button className='outline-0 rounded-[12px] border border-[#CB1B1B] text-[#CB1B1B] p-3 lg:p-3.5 bg-transparent cursor-pointer ease-in-out duration-700 hover:bg-[#cb1b1b] hover:text-white text-[15px] xl:text-[16px] font-black'>
           محصولات ویژه ایرانی فرش
         </button>
-        <button className='outline-0 rounded-[12px] bg-[#CB1B1B] text-white p-3 lg:p-3.5 cursor-pointer ease-in-out duration-700 hover:text-[#cb1b1b] hover:bg-transparent border border-[#CB1B1B] text-[15px] xl:text-[16px]'>
+        <button className='outline-0 rounded-[12px] bg-[#CB1B1B] text-white p-3 lg:p-3.5 cursor-pointer ease-in-out duration-700 hover:text-[#cb1b1b] hover:bg-transparent border border-[#CB1B1B] text-[15px] xl:text-[16px] font-black'>
           عضویت در باشگاه مشتریان
         </button>
       </div>
