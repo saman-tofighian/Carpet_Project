@@ -92,7 +92,7 @@ function Slider3() {
                       loading='lazy'
                     />
                   </figure>
-                  <div className='w-full px-6 md:px-0 lg:px-6 mt-6'>
+                  <div className='w-full px-6 md:px-0 lg:px-16 text-center mt-6'>
                     <p className='font-medium text-[15px] md:text-[14px] md:text-nowrap lg:text-wrap lg:text-[18px] xl:text-[#121212] leading-8'>
                       {val.title}
                     </p>
