@@ -1,3 +1,4 @@
+import { dataSlider3 } from '@/Data';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -7,48 +8,7 @@ import 'swiper/css/pagination';
 import { Autoplay, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 function Slider3() {
-  const [data] = useState([
-    {
-      id: 1,
-      image: './slider6.png',
-      alt: 'picSlider6',
-      title: 'فرش ماشینی لوکس سهند زمینه سرمه ای ',
-      price: '۲۳۳,۰۰۰ تومان',
-      delay: 0.6,
-    },
-    {
-      id: 2,
-      image: './slider9.png',
-      alt: 'picSlider9',
-      title: 'فرش کهن  دست بافت سهند زمینه سرمه ای ',
-      price: '۲۳۳,۰۰۰ تومان',
-      delay: 0.6,
-    },
-    {
-      id: 3,
-      image: './slider7.png',
-      alt: 'picSlider7',
-      title: 'فرش ماشینی رادین طرح شاه عباسی زمینه کرم',
-      price: '۶,۳۰۳,۰۰۰ تومان',
-      delay: 0.9,
-    },
-    {
-      id: 4,
-      image: './slider8.png',
-      alt: 'picSlider8',
-      title: 'فرش ماشینی مشهد طرح افشان زمینه کرم ',
-      price: '۱۱,۶۰۰,۰۰۰ تومان',
-      delay: 1.2,
-    },
-    {
-      id: 5,
-      image: './slider10.png',
-      alt: 'picSlider10',
-      title: 'فرش ماشینی ماهساره طرح آترینا ',
-      price: '۱۳,۵۰۰,۰۰۰ تومان',
-      delay: 0.3,
-    },
-  ]);
+  const [data] = useState(dataSlider3);
   return (
     <section className='w-full mt-4 lg:mt-16'>
       <div className='w-full px-[6%]'>
@@ -92,7 +52,7 @@ function Slider3() {
                       loading='lazy'
                     />
                   </figure>
-                  <div className='w-full px-6 md:px-0 lg:px-16 text-center mt-6'>
+                  <div className='w-full px-6 md:px-0 lg:px-8 mt-6'>
                     <p className='font-medium text-[15px] md:text-[14px] md:text-nowrap lg:text-wrap lg:text-[18px] xl:text-[#121212] leading-8'>
                       {val.title}
                     </p>

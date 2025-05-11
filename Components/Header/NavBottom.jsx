@@ -1,31 +1,11 @@
+import { NavLinks } from '@/Data';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 
 export default function NavBottom() {
   const pathName = usePathname();
-  const [data] = useState([
-    {
-      id: 1,
-      name: 'صفحه اصلی',
-      href: '/',
-    },
-    {
-      id: 2,
-      name: 'وبلاگ',
-      href: '/blog',
-    },
-    {
-      id: 3,
-      name: 'تماس با ما',
-      href: '/contactus',
-    },
-    {
-      id: 4,
-      name: 'درباره ما',
-      href: '/about',
-    },
-  ]);
+  const [data] = useState(NavLinks);
   return (
     <div className='w-full grid grid-cols-12 py-2.5'>
       <div className='col-span-12 hidden lg:block'>

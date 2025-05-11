@@ -20,7 +20,7 @@ export default function Model() {
           </p>
           <div className='w-full flex justify-center mt-8 px-8'>
             <Link
-              href='/'
+              href='/3dmodels'
               className='text-[#CB1B1B] border border-[#CB1B1B] bg-transparent w-full px-4 py-3.5 rounded-[12px] font-bold text-[18px] ease-linear duration-700 hover:bg-[#cb1b1b] hover:text-white'
             >
               فرش های بیشتر

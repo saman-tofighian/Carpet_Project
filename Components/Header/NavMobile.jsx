@@ -1,32 +1,12 @@
 'use client';
+import { NavLinks } from '@/Data';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { MdOutlineClose } from 'react-icons/md';
 
 export default function NavMobile({ isOpen, setIsOpen }) {
-  const [data] = useState([
-    {
-      id: 1,
-      name: 'صفحه اصلی',
-      href: '/',
-    },
-    {
-      id: 2,
-      name: 'وبلاگ',
-      href: '/blog',
-    },
-    {
-      id: 3,
-      name: 'تماس با ما',
-      href: '/contactus',
-    },
-    {
-      id: 4,
-      name: 'درباره ما',
-      href: '/about',
-    },
-  ]);
+  const [data] = useState(NavLinks);
   const pathName = usePathname();
   return (
     <section

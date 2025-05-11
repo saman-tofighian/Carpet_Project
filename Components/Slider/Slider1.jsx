@@ -1,3 +1,4 @@
+import { dataSlider1 } from '@/Data';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -8,40 +9,7 @@ import 'swiper/css/pagination';
 import { Autoplay, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 function Slider1() {
-  const [data] = useState([
-    {
-      id: 1,
-      image: './slider1.webp',
-      alt: 'picSlider1',
-      title: 'فرش کهن دست بافت سهند زمینه سرمه ای',
-      price: '۲۳۳,۰۰۰ تومان',
-      delay: 0.3,
-    },
-    {
-      id: 2,
-      image: './slider2.webp',
-      alt: 'picSlider2',
-      title: 'فرش دست بافت زانیس ماربل زمینه نوک مدادی',
-      price: '۴۹,۹۲۰ تومان',
-      delay: 0.6,
-    },
-    {
-      id: 3,
-      image: './slider3.webp',
-      alt: 'picSlider3',
-      title: 'فرش دست بافت نگین مشهد زمینه فیلی',
-      price: '۱۴,۵۰۰,۰۰۰ تومان',
-      delay: 0.9,
-    },
-    {
-      id: 4,
-      image: './slider4.webp',
-      alt: 'picSlider4',
-      title: 'فرش دست بافت سهندآترینا زمینه سورمه ای',
-      price: '۲۳۳,۰۰۰ تومان',
-      delay: 1.2,
-    },
-  ]);
+  const [data] = useState(dataSlider1);
   return (
     <section className='w-full mt-4 lg:mt-16'>
       <div className='w-full px-[6%]'>
@@ -92,7 +60,7 @@ function Slider1() {
                       loading='lazy'
                     />
                   </figure>
-                  <div className='w-full px-6 md:px-0 lg:px-16 text-center mt-6'>
+                  <div className='w-full px-3 md:px-0 xl:px-16 xl:text-center mt-6'>
                     <p className='font-medium text-[15px] md:text-[14px] md:text-nowrap lg:text-wrap lg:text-[18px] xl:text-[#121212] leading-8'>
                       {val.title}
                     </p>

@@ -3,7 +3,7 @@ export default function Image() {
     <figure className='col-span-12 md:col-start-2 lg:col-start-4 xl:col-span-6 flex flex-wrap'>
       <div className='w-full'>
         <img
-          src='slider5.png'
+          src='slider5.webp'
           alt='img1'
           className='h-[400px] sm:h-[500px] md:h-[540px] rounded-[8px]'
         />

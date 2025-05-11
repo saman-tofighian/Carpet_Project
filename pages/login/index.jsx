@@ -1,6 +1,5 @@
 import Form from '@/Components/SignIn/Form';
-import Image from '@/Components/SignIn/Image';
-
+import Image from '@/Components/SignUp/Image';
 export default function Login() {
   return (
     <section className='w-full mt-6 lg:mt-11'>
