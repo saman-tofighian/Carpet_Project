@@ -1,82 +1,74 @@
-import About from '@/Components/Product/About';
-import Image from '@/Components/Product/Image';
+import Product from '@/Components/Product/Product';
 import Seller from '@/Components/Product/Seller';
-const products = [
-  {
-    id: '1',
-    title: 'فرش ماشینی ماهساره طرح آترینا زمینه آبی',
-    price: '۱۳/۵۰۰/۰۰۰ تومان',
-    image: '/slider1.webp',
-    alt: 'picSlider5',
-    size: 'شش متری ( ۳۰۰ * ۲۰۰ )',
-    features: [
-      { title: 'کیفیت فرش', value: 'درجه یک' },
-      { title: 'رنگ زمینه', value: 'آبی' },
-      { title: 'شکل', value: 'مستطیل' },
-      { title: 'جنس نخ پود', value: 'پلی استر و پنبه' },
-      { title: 'جنس نخ تار', value: 'پلی استر و پنبه' },
-      { title: 'جنس نخ خاب', value: 'اکلیریک هیت ست شده' },
-    ],
-    seller: {
-      name: 'شرکت فرش سهند',
-      performance: 'عملکرد عالی',
-      rating: '۴.۶',
-    },
-  },
-  {
-    id: '2',
-    title: 'فرش ماشینی طرح افشان',
-    price: '۸/۴۰۰/۰۰۰ تومان',
-    image: '/slider2.webp',
-    alt: 'picSlider2',
-    size: 'نه متری ( ۳۵۰ * ۲۵۰ )',
-    features: [
-      { title: 'کیفیت فرش', value: 'درجه یک' },
-      { title: 'رنگ زمینه', value: 'کرم' },
-      { title: 'شکل', value: 'مستطیل' },
-      { title: 'جنس نخ پود', value: 'پلی استر' },
-      { title: 'جنس نخ تار', value: 'پنبه' },
-      { title: 'جنس نخ خاب', value: 'اکریلیک' },
-    ],
-    seller: {
-      name: 'فرش نگین مشهد',
-      performance: 'عملکرد خوب',
-      rating: '۴.۳',
-    },
-  },
-];
-
-export async function getStaticPaths() {
-  const paths = products.map((product) => ({
-    params: { id: product.id },
-  }));
-
-  return {
-    paths,
-    fallback: false,
-  };
-}
-
-export async function getStaticProps({ params }) {
-  const product = products.find((item) => item.id === params.id);
-
-  return {
-    props: {
-      product,
-    },
-  };
-}
-
-export default function ProductPage({ product }) {
+import Slider3 from '@/Components/Slider/Slider3';
+import Link from 'next/link';
+import { IoMdHome } from 'react-icons/io';
+export default function Product() {
   return (
-    <section className='w-full grid grid-cols-12 gap-y-14 xl:gap-y-0'>
-      <Image image={product.image} />
-      <About
-        title={product.title}
-        size={product.size}
-        features={product.features}
-      />
-      <Seller seller={product.seller} price={product.price} />
+    <section className='w-full mt-8'>
+      <div className='w-full grid grid-cols-12 px-[6%]'>
+        <div className='col-span-12'>
+          <nav aria-label='breadcrumb' dir='rtl'>
+            <ol className='inline-flex items-center space-x-reverse space-x-2 py-2 text-sm font-medium'>
+              <li className='inline-flex items-center'>
+                <Link
+                  href='/'
+                  className='text-[#CB1B1B] text-[18px] flex items-center gap-x-2'
+                >
+                  <IoMdHome size='1.5rem' />
+                  خانه
+                </Link>
+              </li>
+              <li className='inline-flex items-center space-x-2 space-x-reverse'>
+                <svg
+                  className='h-6 w-6 text-gray-400'
+                  fill='currentColor'
+                  viewBox='0 0 20 20'
+                  xmlns='http://www.w3.org/2000/svg'
+                >
+                  <path
+                    fillRule='evenodd'
+                    d='M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z'
+                    clipRule='evenodd'
+                  ></path>
+                </svg>
+                <Link href='/' className='text-[#CB1B1B] text-[18px]'>
+                  فرش ماشینی
+                </Link>
+              </li>
+              <li
+                className='inline-flex items-center space-x-2 space-x-reverse'
+                aria-current='page'
+              >
+                <svg
+                  className='h-6 w-6 text-gray-400'
+                  fill='currentColor'
+                  viewBox='0 0 20 20'
+                  xmlns='http://www.w3.org/2000/svg'
+                >
+                  <path
+                    fillRule='evenodd'
+                    d='M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z'
+                    clipRule='evenodd'
+                  ></path>
+                </svg>
+                <Link className='text-[#909090] text-[18px]' href='/'>
+                  ماهساره
+                </Link>
+              </li>
+            </ol>
+          </nav>
+        </div>
+        <div className='col-span-12 xl:col-span-9 mt-10 xl:mt-16 px-3.5'>
+          <Product />
+        </div>
+        <div className='col-span-12 md:col-span-8 md:col-start-3 xl:col-span-3 mt-2 md:mt-16 flex items-center xl:px-3.5'>
+          <Seller />
+        </div>
+        <div className='col-span-12 mt-10'>
+          <Slider3 />
+        </div>
+      </div>
     </section>
   );
 }

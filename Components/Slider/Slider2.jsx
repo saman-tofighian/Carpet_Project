@@ -75,7 +75,7 @@ function Slider2() {
                   </div>
                   <div className='w-full flex justify-center px-6 mt-10'>
                     <Link
-                      href={`/products/${val.id}`}
+                      href='/products'
                       className='text-[#CB1B1B] border border-[#CB1B1B] rounded-[12px] py-3 w-full text-center text-[15px] font-bold ease-linear duration-700 hover:text-white hover:bg-[#CB1B1B]'
                     >
                       مشاهده بیشتر
