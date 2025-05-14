@@ -15,17 +15,27 @@ const sortOptions = [
 const PRODUCTS_PER_PAGE = 6;
 
 export default function Products() {
-  const [category, setCategory] = useState(
-    localStorage.getItem('category') || 'همه'
-  );
-  const [sort, setSort] = useState(localStorage.getItem('sort') || 'oldest');
+  const [category, setCategory] = useState('همه');
+  const [sort, setSort] = useState('oldest');
   const [page, setPage] = useState(1);
   const [search, setSearch] = useState('');
   const [priceRange, setPriceRange] = useState([0, 10000000]);
 
+  // مقداردهی اولیه از localStorage فقط در مرورگر
   useEffect(() => {
-    localStorage.setItem('category', category);
-    localStorage.setItem('sort', sort);
+    if (typeof window !== 'undefined') {
+      const savedCategory = localStorage.getItem('category');
+      const savedSort = localStorage.getItem('sort');
+      if (savedCategory) setCategory(savedCategory);
+      if (savedSort) setSort(savedSort);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('category', category);
+      localStorage.setItem('sort', sort);
+    }
   }, [category, sort]);
 
   const filtered = allProducts.filter((p) => {
