@@ -10,7 +10,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 function Slider3() {
   const [data] = useState(dataSlider3);
   return (
-    <section className='w-full mt-4 lg:mt-16'>
+    <section className='w-full mt-4 lg:mt-16 mb-24'>
       <div className='w-full px-[6%]'>
         <div className='w-full flex items-center md:justify-between'>
           <h3 className='font-bold text-2xl text-[#121212]'>فرش های مشابه</h3>

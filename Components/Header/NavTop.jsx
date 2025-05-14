@@ -13,7 +13,7 @@ export default function NavTop({ openMobileOpen }) {
         </span>
         <input
           type='search'
-          className='w-[439px] max-w-[439px] p-3 outline-0 border-0 rounded-[12px] text-[#717171] bg-[#EDEDED] hidden lg:flex order-2'
+          className='w-[448px] max-w-[448px] p-3 outline-0 border-0 rounded-[12px] text-[#717171] bg-[#EDEDED] hidden lg:flex order-2'
           placeholder='جستجو  فرش'
         />
         <button

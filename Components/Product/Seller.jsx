@@ -1,6 +1,6 @@
 import { FaShop, FaStar } from 'react-icons/fa6';
 
-export default function Seller() {
+export default function Seller({ productSeller }) {
   return (
     <div className='w-full'>
       <div className='border-b md:border border-[#ADADAD] px-4 py-8 rounded-[12px]'>
@@ -22,7 +22,7 @@ export default function Seller() {
         <div className='w-full flex justify-between mt-6 items-center px-2'>
           <span className='text-[#353535] text-[16px] font-bold'>قیمت : </span>
           <span className='text-[#121212] font-medium text-[20px]'>
-            ۱۳/۵۰۰/۰۰۰
+            {productSeller.price}
           </span>
         </div>
         <div className='w-full flex justify-center mt-7'>

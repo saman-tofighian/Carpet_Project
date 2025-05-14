@@ -1,5 +1,6 @@
 import { ProductData } from '@/Data';
 import { AnimatePresence, motion } from 'framer-motion';
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { FaSortAmountDown, FaSortAmountUp } from 'react-icons/fa';
 
@@ -150,11 +151,14 @@ export default function Products() {
                 </h3>
                 <div className='text-[#CB1B1B] font-bold text-md flex justify-between my-3.5'>
                   <span className='text-gray-800'>قیمت :</span>
-                  <span>{parseInt(product.price).toLocaleString()} تومان</span>
+                  <span>{product.price} تومان</span>
                 </div>
-                <button className='mt-3 py-3 px-4 border border-[#CB1B1B] text-[#CB1B1B] hover:bg-[#CB1B1B] hover:text-white rounded-md transition duration-700 ease-linear cursor-pointer'>
+                <Link
+                  href={`/products/${product.id}`}
+                  className='mt-3 py-3 px-4 border border-[#CB1B1B] text-[#CB1B1B] hover:bg-[#CB1B1B] hover:text-white rounded-md transition duration-700 ease-linear cursor-pointer text-center'
+                >
                   مشاهده جزئیات
-                </button>
+                </Link>
               </div>
             </motion.div>
           ))}

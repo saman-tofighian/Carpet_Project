@@ -1,14 +1,14 @@
 import { useState } from 'react';
 
-export default function () {
+export default function ({ productAbout }) {
   const [showFeatures, setShowFeatures] = useState(false);
   return (
     <div className='col-span-12 xl:col-span-6 xl:px-3'>
       <h6 className='text-[#CB1B1B] font-bold text-[16px] hidden xl:flex'>
-        فرش ماهساره / فرش ماشینی ماهساره
+        فرش / {productAbout.category}
       </h6>
       <h4 className='text-[#121212] font-bold text-[18px] xl:text-[24px] mt-3 text-center xl:text-start'>
-        فرش ماشینی ماهساره طرح آترینا زمینه آبی
+        {productAbout.title}
       </h4>
       <hr className='mt-6 text-[#ADADAD] rounded-[24px]' />
       <div className='w-full flex mt-6 gap-5'>

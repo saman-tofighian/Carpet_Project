@@ -1,9 +1,15 @@
 import Product from '@/Components/Product/Product';
 import Seller from '@/Components/Product/Seller';
 import Slider3 from '@/Components/Slider/Slider3';
+import { ProductData } from '@/Data';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { IoMdHome } from 'react-icons/io';
-export default function Product() {
+export default function ProductById() {
+  const { id } = useRouter().query;
+  const product = ProductData.find((item) => item.id == parseInt(id));
+  if (!product) return <div>محصول پیدا نشد</div>;
+
   return (
     <section className='w-full mt-8'>
       <div className='w-full grid grid-cols-12 px-[6%]'>
@@ -32,8 +38,8 @@ export default function Product() {
                     clipRule='evenodd'
                   ></path>
                 </svg>
-                <Link href='/' className='text-[#CB1B1B] text-[18px]'>
-                  فرش ماشینی
+                <Link href='/products' className='text-[#CB1B1B] text-[18px]'>
+                  محصولات
                 </Link>
               </li>
               <li
@@ -53,17 +59,17 @@ export default function Product() {
                   ></path>
                 </svg>
                 <Link className='text-[#909090] text-[18px]' href='/'>
-                  ماهساره
+                  {product.title}
                 </Link>
               </li>
             </ol>
           </nav>
         </div>
         <div className='col-span-12 xl:col-span-9 mt-10 xl:mt-16 px-3.5'>
-          <Product />
+          <Product productParent={product} />
         </div>
         <div className='col-span-12 md:col-span-8 md:col-start-3 xl:col-span-3 mt-2 md:mt-16 flex items-center xl:px-3.5'>
-          <Seller />
+          <Seller productSeller={product} />
         </div>
         <div className='col-span-12 mt-10'>
           <Slider3 />
