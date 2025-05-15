@@ -1,4 +1,7 @@
+import { useCart } from '../../context/CartContext ';
+
 export default function Seller() {
+  const { count } = useCart(); // ✅ از کانتکست استفاده کن
   return (
     <div className='w-full'>
       <div className='border border-[#ADADAD] px-6 py-8 rounded-[12px]'>
@@ -6,7 +9,9 @@ export default function Seller() {
           <span className='text-[#000000] font-bold text-[18px]'>
             تعداد فرش :
           </span>
-          <span className='text-[#000000] font-bold text-[18px]'>1</span>
+          <span className='text-[#000000] font-bold text-[18px]'>
+            {count.toLocaleString('fa-IR')}
+          </span>
         </div>
         <div className='w-full flex justify-between mt-4'>
           <span className='text-[#000000] font-bold text-[18px]'>

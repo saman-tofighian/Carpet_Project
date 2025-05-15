@@ -398,3 +398,5 @@ export const ProductData = [
     image: '/images/carpet30.jpg',
   },
 ];
+
+export let CountShoppingCart = 0;

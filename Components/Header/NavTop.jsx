@@ -1,9 +1,11 @@
+import { useCart } from '@/context/CartContext ';
 import Link from 'next/link';
 import { CiLogin } from 'react-icons/ci';
 import { IoIosLogIn } from 'react-icons/io';
 import { SlBasket } from 'react-icons/sl';
 import { VscListSelection } from 'react-icons/vsc';
 export default function NavTop({ openMobileOpen }) {
+  const { count } = useCart();
   return (
     <div className='w-full grid grid-cols-12'>
       {/* search */}
@@ -27,9 +29,14 @@ export default function NavTop({ openMobileOpen }) {
       <div className='col-span-5 lg:col-span-3 flex items-center gap-x-4 justify-end'>
         <Link
           href='/shopping'
-          className='border border-[#CB1B1B] rounded-[12px] text-[#CB1B1B] px-3 py-2.5 flex justify-center items-center text-center cursor-pointer ease-in-out duration-700 hover:bg-[#cb1b1b] hover:text-white'
+          className='border border-[#CB1B1B] rounded-[12px] text-[#CB1B1B] px-3 py-2.5 flex justify-center items-center text-center cursor-pointer ease-in-out duration-700 hover:bg-[#cb1b1b] hover:text-white relative'
         >
           <SlBasket size='1.4rem' />
+          {count > 0 && (
+            <div className='w-[15px] h-[15px] rounded-full absolute top-[-.1px] right-3.5 border border-white bg-[#CB1B1B] text-white text-[12px] font-bold flex justify-center items-center shadow-lg'>
+              {count}
+            </div>
+          )}
         </Link>
         <Link
           href='/register'
