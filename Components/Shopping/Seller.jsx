@@ -1,7 +1,8 @@
 import { useCart } from '../../context/CartContext ';
 
 export default function Seller() {
-  const { count } = useCart(); // ✅ از کانتکست استفاده کن
+  const { count } = useCart();
+  const data = ProductData;
   return (
     <div className='w-full'>
       <div className='border border-[#ADADAD] px-6 py-8 rounded-[12px]'>

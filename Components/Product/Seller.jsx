@@ -3,11 +3,11 @@ import toast, { Toaster } from 'react-hot-toast';
 import { FaShop, FaStar } from 'react-icons/fa6';
 
 export default function Seller({ productSeller }) {
-  const { addToCart } = useCart(); // ✅ از کانتکست استفاده کن
+  const { addToCart } = useCart();
 
   const addToCartHandler = (e) => {
     e.preventDefault();
-    addToCart(productSeller); // ✅ تابع معتبر شد
+    addToCart(productSeller);
     toast.success(`${productSeller.title} به سبد خرید شما اضافه شد`);
   };
 
