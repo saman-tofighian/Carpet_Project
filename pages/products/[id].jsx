@@ -1,3 +1,4 @@
+import NotFoundSection from '@/Components/NotFoundSection/NotFoundSection';
 import Product from '@/Components/Product/Product';
 import Seller from '@/Components/Product/Seller';
 import Slider3 from '@/Components/Slider/Slider3';
@@ -8,7 +9,7 @@ import { IoMdHome } from 'react-icons/io';
 export default function ProductById() {
   const { id } = useRouter().query;
   const product = ProductData.find((item) => item.id == parseInt(id));
-  if (!product) return <div>محصول پیدا نشد</div>;
+  if (!product) return <NotFoundSection />;
 
   return (
     <section className='w-full mt-8'>

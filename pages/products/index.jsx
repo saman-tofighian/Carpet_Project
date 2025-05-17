@@ -161,7 +161,7 @@ export default function Products() {
                 </h3>
                 <div className='text-[#CB1B1B] font-bold text-md flex justify-between my-3.5'>
                   <span className='text-gray-800'>قیمت :</span>
-                  <span>{product.price} تومان</span>
+                  <span>{product.price.toLocaleString('fa', 'ir')} تومان</span>
                 </div>
                 <Link
                   href={`/products/${product.id}`}
