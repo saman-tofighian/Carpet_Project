@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useState } from 'react';
+import toast from 'react-hot-toast';
 
 const CartContext = createContext();
 
@@ -17,7 +18,14 @@ export function CartProvider({ children }) {
   }, [cart]);
 
   const addToCart = (product) => {
-    setCart((prevCart) => [...prevCart, product]);
+    const isExist = cart.find((item) => item.id === product.id);
+    if (isExist) {
+      toast.error('این فرش قبلاً به سبد خرید شما اضافه شده است');
+      return;
+    }
+
+    setCart([...cart, product]);
+    toast.success(`${product.title} به سبد خرید شما اضافه شد`);
   };
 
   const count = cart.length;

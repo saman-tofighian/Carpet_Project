@@ -1,7 +1,6 @@
-import { dataSlider2 } from '@/Data';
+import { ProductData } from '@/Data';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { useState } from 'react';
 import { FaArrowLeft } from 'react-icons/fa6';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -9,7 +8,9 @@ import 'swiper/css/pagination';
 import { Autoplay, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 function Slider2() {
-  const [data] = useState(dataSlider2);
+  const filteredData = ProductData.filter(
+    (item) => item.id >= 5 && item.id <= 8
+  );
   return (
     <section className='w-full mt-4 lg:mt-16'>
       <div className='w-full px-[6%]'>
@@ -41,7 +42,7 @@ function Slider2() {
             }}
             className='mySwiper custom-pagination'
           >
-            {data.map((val) => (
+            {filteredData.map((val) => (
               <SwiperSlide
                 key={val.id}
                 className='border border-[#D9D9D9] rounded-[12px] p-4 '
@@ -70,12 +71,12 @@ function Slider2() {
                       قیمت :
                     </span>
                     <span className='text-[#121212] font-medium text-[18px]'>
-                      {val.price}
+                      {val.price.toLocaleString('fa', 'ir')} تومان
                     </span>
                   </div>
                   <div className='w-full flex justify-center px-6 mt-10'>
                     <Link
-                      href='/products'
+                      href={`/products/${val.id}`}
                       className='text-[#CB1B1B] border border-[#CB1B1B] rounded-[12px] py-3 w-full text-center text-[15px] font-bold ease-linear duration-700 hover:text-white hover:bg-[#CB1B1B]'
                     >
                       مشاهده بیشتر

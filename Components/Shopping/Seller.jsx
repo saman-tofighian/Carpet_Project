@@ -1,4 +1,5 @@
 import { useCart } from '@/context/CartContext ';
+import Link from 'next/link';
 
 export default function CartSummary() {
   const { count, total } = useCart();
@@ -32,9 +33,12 @@ export default function CartSummary() {
         </div>
         <hr className='mt-4 text-[#ADADAD]' />
         <div className='w-full flex justify-center mt-7'>
-          <button className='flex w-full py-3.5 border text-white bg-[#CB1B1B] rounded-[12px] justify-center items-center duration-700 ease-linear hover:bg-transparent hover:border hover:text-[#CB1B1B] cursor-pointer'>
+          <Link
+            href='/checkout'
+            className='flex w-full py-3.5 border text-white bg-[#CB1B1B] rounded-[12px] justify-center items-center duration-700 ease-linear hover:bg-transparent hover:border hover:text-[#CB1B1B] cursor-pointer'
+          >
             سفارش و خرید
-          </button>
+          </Link>
         </div>
       </div>
     </div>

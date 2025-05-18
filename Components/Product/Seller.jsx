@@ -1,4 +1,4 @@
-import toast, { Toaster } from 'react-hot-toast';
+import { Toaster } from 'react-hot-toast';
 import { FaShop, FaStar } from 'react-icons/fa6';
 import { useCart } from '../../context/CartContext ';
 
@@ -8,7 +8,6 @@ export default function Seller({ productSeller }) {
   const addToCartHandler = (e) => {
     e.preventDefault();
     addToCart(productSeller);
-    toast.success(`${productSeller.title} به سبد خرید شما اضافه شد`);
   };
 
   return (
