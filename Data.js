@@ -103,6 +103,7 @@ export const ProductData = [
     title: 'فرش کهن دست بافت سهند زمینه سرمه ای',
     price: 2330000,
     delay: 0.3,
+    quantity: 1,
   },
   {
     id: 2,
@@ -111,6 +112,7 @@ export const ProductData = [
     title: 'فرش دست بافت زانیس ماربل زمینه نوک مدادی',
     price: 499200,
     delay: 0.6,
+    quantity: 1,
   },
   {
     id: 3,
@@ -119,6 +121,7 @@ export const ProductData = [
     title: 'فرش دست بافت نگین مشهد زمینه فیلی',
     price: 1450000,
     delay: 0.9,
+    quantity: 1,
   },
   {
     id: 4,
@@ -127,6 +130,7 @@ export const ProductData = [
     title: 'فرش دست بافت سهندآترینا زمینه سورمه ای',
     price: 2330000,
     delay: 1.2,
+    quantity: 1,
   },
   {
     id: 5,
@@ -135,6 +139,7 @@ export const ProductData = [
     title: 'فرش ماشینی ماهساره طرح آترینا زمینه آبی',
     price: 1350000,
     delay: 0.3,
+    quantity: 1,
   },
   {
     id: 6,
@@ -143,6 +148,7 @@ export const ProductData = [
     title: 'فرش ماشینی لوکس سهند زمینه سرمه ای ',
     price: 2330000,
     delay: 0.6,
+    quantity: 1,
   },
   {
     id: 7,
@@ -151,6 +157,7 @@ export const ProductData = [
     title: 'فرش ماشینی رادین طرح شاه عباسی زمینه کرم',
     price: 6303000,
     delay: 0.9,
+    quantity: 1,
   },
   {
     id: 8,
@@ -159,6 +166,7 @@ export const ProductData = [
     title: 'فرش ماشینی مشهد طرح افشان زمینه کرم ',
     price: 1160000,
     delay: 1.2,
+    quantity: 1,
   },
   {
     id: 9,
@@ -166,6 +174,7 @@ export const ProductData = [
     price: 3000000,
     category: 'دستباف',
     image: '/slider3.webp',
+    quantity: 1,
   },
   {
     id: 10,
@@ -173,6 +182,7 @@ export const ProductData = [
     price: 5500000,
     category: 'مدرن',
     image: '/slider4.webp',
+    quantity: 1,
   },
   {
     id: 11,
@@ -180,6 +190,7 @@ export const ProductData = [
     price: 6400000,
     category: 'ماشینی',
     image: '/slider5.webp',
+    quantity: 1,
   },
   {
     id: 12,
@@ -187,6 +198,7 @@ export const ProductData = [
     price: 9800000,
     category: 'ابریشمی',
     image: '/slider6.webp',
+    quantity: 1,
   },
   {
     id: 13,
@@ -194,6 +206,7 @@ export const ProductData = [
     price: 4500000,
     category: 'دستباف',
     image: '/slider7.webp',
+    quantity: 1,
   },
   {
     id: 14,
@@ -201,6 +214,7 @@ export const ProductData = [
     price: 3900000,
     category: 'مدرن',
     image: '/slider8.webp',
+    quantity: 1,
   },
   {
     id: 15,
@@ -208,6 +222,7 @@ export const ProductData = [
     price: 2700000,
     category: 'ماشینی',
     image: '/slider9.webp',
+    quantity: 1,
   },
   {
     id: 16,
@@ -215,6 +230,7 @@ export const ProductData = [
     price: 4800000,
     category: 'ابریشمی',
     image: '/images/carpet10.jpg',
+    quantity: 1,
   },
   {
     id: 17,
@@ -222,6 +238,7 @@ export const ProductData = [
     price: 9100000,
     category: 'ماشینی',
     image: '/images/carpet11.jpg',
+    quantity: 1,
   },
   {
     id: 18,
@@ -229,6 +246,7 @@ export const ProductData = [
     price: 7500000,
     category: 'دستباف',
     image: '/images/carpet12.jpg',
+    quantity: 1,
   },
   {
     id: 19,
@@ -236,6 +254,7 @@ export const ProductData = [
     price: 4700000,
     category: 'مدرن',
     image: '/images/carpet13.jpg',
+    quantity: 1,
   },
   {
     id: 20,
@@ -243,6 +262,7 @@ export const ProductData = [
     price: 6900000,
     category: 'ماشینی',
     image: '/images/carpet14.jpg',
+    quantity: 1,
   },
   {
     id: 21,
@@ -250,6 +270,7 @@ export const ProductData = [
     price: 6200000,
     category: 'ابریشمی',
     image: '/images/carpet15.jpg',
+    quantity: 1,
   },
   {
     id: 22,
@@ -257,6 +278,7 @@ export const ProductData = [
     price: 1000000,
     category: 'دستباف',
     image: '/images/carpet16.jpg',
+    quantity: 1,
   },
   {
     id: 23,
@@ -264,6 +286,7 @@ export const ProductData = [
     price: 5200000,
     category: 'مدرن',
     image: '/images/carpet17.jpg',
+    quantity: 1,
   },
   {
     id: 24,
@@ -271,6 +294,7 @@ export const ProductData = [
     price: 8600000,
     category: 'ماشینی',
     image: '/images/carpet18.jpg',
+    quantity: 1,
   },
   {
     id: 25,
@@ -278,6 +302,7 @@ export const ProductData = [
     price: 3500000,
     category: 'ابریشمی',
     image: '/images/carpet19.jpg',
+    quantity: 1,
   },
   {
     id: 26,
@@ -285,6 +310,7 @@ export const ProductData = [
     price: 8900000,
     category: 'دستباف',
     image: '/images/carpet20.jpg',
+    quantity: 1,
   },
   {
     id: 27,
@@ -292,6 +318,7 @@ export const ProductData = [
     price: 3100000,
     category: 'مدرن',
     image: '/images/carpet21.jpg',
+    quantity: 1,
   },
   {
     id: 28,
@@ -299,6 +326,7 @@ export const ProductData = [
     price: 7300000,
     category: 'ماشینی',
     image: '/images/carpet22.jpg',
+    quantity: 1,
   },
   {
     id: 29,
@@ -306,6 +334,7 @@ export const ProductData = [
     price: 5800000,
     category: 'ابریشمی',
     image: '/images/carpet23.jpg',
+    quantity: 1,
   },
   {
     id: 30,
@@ -313,6 +342,7 @@ export const ProductData = [
     price: 9400000,
     category: 'دستباف',
     image: '/images/carpet24.jpg',
+    quantity: 1,
   },
   {
     id: 31,
@@ -320,6 +350,7 @@ export const ProductData = [
     price: 4800000,
     category: 'مدرن',
     image: '/images/carpet25.jpg',
+    quantity: 1,
   },
   {
     id: 32,
@@ -327,6 +358,7 @@ export const ProductData = [
     price: 7800000,
     category: 'ماشینی',
     image: '/images/carpet26.jpg',
+    quantity: 1,
   },
   {
     id: 33,
@@ -334,6 +366,7 @@ export const ProductData = [
     price: 4300000,
     category: 'ابریشمی',
     image: '/images/carpet27.jpg',
+    quantity: 1,
   },
   {
     id: 34,
@@ -341,6 +374,7 @@ export const ProductData = [
     price: 7200000,
     category: 'دستباف',
     image: '/images/carpet28.jpg',
+    quantity: 1,
   },
 ];
 

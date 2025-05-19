@@ -1,12 +1,13 @@
 import EmptyCart from '@/Components/EmptyCart/EmptyCart';
 import CartSummary from '@/Components/Shopping/Seller';
 import ShoppingCart from '@/Components/Shopping/Shopping';
-import { useCart } from '@/context/CartContext ';
 import Link from 'next/link';
 import { IoMdHome } from 'react-icons/io';
+import { useCart } from '../../context/CartContext ';
 
 export default function Shopping() {
-  const { count, total } = useCart();
+  const { cart, count, total } = useCart();
+
   return (
     <section className='w-full mt-8 mb-10 xl:mb-28'>
       <div className='w-full grid grid-cols-12 px-[6%] xl:gap-x-28'>
@@ -31,7 +32,6 @@ export default function Shopping() {
                   className='h-6 w-6 text-gray-400'
                   fill='currentColor'
                   viewBox='0 0 20 20'
-                  xmlns='http://www.w3.org/2000/svg'
                 >
                   <path
                     fillRule='evenodd'
@@ -39,21 +39,26 @@ export default function Shopping() {
                     clipRule='evenodd'
                   ></path>
                 </svg>
-                <Link
-                  className='text-[#909090] text-[14px] sm:text-[16px] md:text-[18px]'
-                  href='/'
-                >
+                <span className='text-[#909090] text-[14px] sm:text-[16px] md:text-[18px]'>
                   سبد خرید
-                </Link>
+                </span>
               </li>
             </ol>
           </nav>
         </div>
+
         {count > 0 && total > 0 ? (
           <>
             <div className='col-span-12 sm:col-span-10 sm:col-start-2 md:col-span-8 md:col-start-3 lg:col-span-6 lg:col-start-4 xl:col-span-8 border border-[#ADADAD] py-14 px-6 rounded-[12px] mt-8'>
-              <ShoppingCart />
+              {cart.map((item) => (
+                <ShoppingCart
+                  key={item.id}
+                  ShoppingImage={item.image}
+                  ShoppingAbout={item}
+                />
+              ))}
             </div>
+
             <div className='col-span-12 sm:col-span-10 sm:col-start-2 md:col-span-8 md:col-start-3 lg:col-span-6 lg:col-start-4 xl:col-span-4 mt-8'>
               <CartSummary />
             </div>
