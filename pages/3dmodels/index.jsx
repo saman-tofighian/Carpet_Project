@@ -55,7 +55,7 @@ export default function ThreeDRugsPage() {
 
               <div className='flex justify-between items-center border-t pt-4 text-[#1F1F1F] font-medium text-[16px]'>
                 <span>قیمت:</span>
-                <span>{model.price} تومان</span>
+                <span>{model.price.toLocaleString('fa', 'ir')} تومان</span>
               </div>
 
               <div className='pt-3 flex justify-center'>

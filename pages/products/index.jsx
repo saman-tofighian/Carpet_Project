@@ -19,7 +19,7 @@ export default function Products() {
   const [sort, setSort] = useState('oldest');
   const [page, setPage] = useState(1);
   const [search, setSearch] = useState('');
-  const [priceRange, setPriceRange] = useState([0, 10000000]);
+  const [priceRange, setPriceRange] = useState([0, 1000000000]);
 
   // مقداردهی اولیه از localStorage فقط در مرورگر
   useEffect(() => {
