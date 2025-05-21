@@ -106,7 +106,7 @@ export default function ContactUs() {
             </div>
             <button
               type='submit'
-              className='bg-[#CB1B1B] text-white px-6 py-3 rounded-md hover:bg-[#a51818] transition font-semibold cursor-pointer flex justify-center items-center gap-x-3'
+              className='bg-white text-[#CB1B1B] border px-12 py-3 rounded-md hover:bg-[#CB1B1B] hover:text-white ease-linear duration-700 font-semibold cursor-pointer flex justify-center items-center gap-x-3'
             >
               ارسال پیام
               {loading && <FaSpinner className='animate-spin' />}
@@ -166,7 +166,7 @@ export default function ContactUs() {
           </div>
         </div>
 
-        <div className='mt-16 xl:mt-28'>
+        <div className='mt-16 xl:mt-28 mb-22'>
           <h2 className='text-3xl font-bold text-[#CB1B1B] mb-10 text-center'>
             ما کجا هستیم؟
           </h2>

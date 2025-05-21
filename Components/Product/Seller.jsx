@@ -37,7 +37,7 @@ export default function Seller({ productSeller }) {
           <div className='w-full flex justify-center mt-7'>
             <button
               onClick={addToCartHandler}
-              className='flex w-full py-3.5 border text-white bg-[#CB1B1B] rounded-[12px] justify-center items-center duration-700 ease-linear hover:bg-transparent hover:border  hover:text-[#CB1B1B] cursor-pointer'
+              className='flex w-full py-3.5 border text-[#CB1B1B] bg-transparent rounded-[12px] justify-center items-center duration-700 ease-linear hover:bg-[#CB1B1B] hover:text-white cursor-pointer'
             >
               افزودن به سبد خرید
             </button>

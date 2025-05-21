@@ -1,7 +1,11 @@
 @import 'tailwindcss';
 @font-face {
   font-family: Yekan;
-  src: url('../public/fonts/BYekan+\ Bold.ttf');
+  src: url('../public/fonts/BYekan+\ Bold.ttf'),
+    url('../public/fonts/BYekan+_0.ttf'),
+    url('../public/fonts/DimaYekanOutline.ttf'),
+    url('../public/fonts/Persian-Yekan.ttf'),
+    url('../public/fonts/YEKAN\ PLUS.TTF');
 }
 * {
   /* margin: 0;

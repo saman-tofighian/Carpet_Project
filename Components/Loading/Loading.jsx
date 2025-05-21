@@ -6,12 +6,12 @@ export default function Loading() {
         initial={{ clipPath: 'inset(0% 0% 100% 0%)' }}
         animate={{ clipPath: 'inset(0% 0% 0% 0%)' }}
         transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-        className='w-64 h-64 overflow-hidden'
+        className='w-72 h-80 overflow-hidden'
       >
         <img
-          src='/loader.jpg'
+          src='/loader.png'
           alt='در حال پهن شدن فرش...'
-          className='w-full h-full object-cover'
+          className='w-full h-full object-center'
         />
       </motion.div>
 
