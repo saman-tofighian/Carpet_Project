@@ -1,46 +1,3 @@
-export const dataSlider3 = [
-  {
-    id: 1,
-    image: '/slider6.webp',
-    alt: 'picSlider6',
-    title: 'فرش ماشینی لوکس سهند زمینه سرمه ای ',
-    price: '۲۳۳,۰۰۰ تومان',
-    delay: 0.6,
-  },
-  {
-    id: 2,
-    image: '/slider9.webp',
-    alt: 'picSlider9',
-    title: 'فرش کهن  دست بافت سهند زمینه سرمه ای ',
-    price: '۲۳۳,۰۰۰ تومان',
-    delay: 0.6,
-  },
-  {
-    id: 3,
-    image: '/slider7.webp',
-    alt: 'picSlider7',
-    title: 'فرش ماشینی رادین طرح شاه عباسی زمینه کرم',
-    price: '۶,۳۰۳,۰۰۰ تومان',
-    delay: 0.9,
-  },
-  {
-    id: 4,
-    image: '/slider8.webp',
-    alt: 'picSlider8',
-    title: 'فرش ماشینی مشهد طرح افشان زمینه کرم ',
-    price: '۱۱,۶۰۰,۰۰۰ تومان',
-    delay: 1.2,
-  },
-  {
-    id: 5,
-    image: '/slider10.webp',
-    alt: 'picSlider10',
-    title: 'فرش ماشینی ماهساره طرح آترینا زمینه فیروزه ای',
-    price: '۱۳,۵۰۰,۰۰۰ تومان',
-    delay: 0.3,
-  },
-];
-
 export const NavLinks = [
   {
     id: 1,
@@ -170,6 +127,46 @@ export const ProductData = [
   },
   {
     id: 9,
+    image: '/slider6.webp',
+    alt: 'picSlider6',
+    title: 'فرش ماشینی لوکس سهند زمینه سرمه ای ',
+    price: 23300000,
+    delay: 0.6,
+  },
+  {
+    id: 10,
+    image: '/slider9.webp',
+    alt: 'picSlider9',
+    title: 'فرش کهن  دست بافت سهند زمینه سرمه ای ',
+    price: 24500000,
+    delay: 0.6,
+  },
+  {
+    id: 11,
+    image: '/slider7.webp',
+    alt: 'picSlider7',
+    title: 'فرش ماشینی رادین طرح شاه عباسی زمینه کرم',
+    price: 63030000,
+    delay: 0.9,
+  },
+  {
+    id: 12,
+    image: '/slider8.webp',
+    alt: 'picSlider8',
+    title: 'فرش ماشینی مشهد طرح افشان زمینه کرم ',
+    price: 11600000,
+    delay: 1.2,
+  },
+  {
+    id: 13,
+    image: '/slider10.webp',
+    alt: 'picSlider10',
+    title: 'فرش ماشینی ماهساره طرح آترینا زمینه فیروزه ای',
+    price: 13500000,
+    delay: 0.3,
+  },
+  {
+    id: 14,
     title: 'فرش دستباف کاشان',
     price: 30000000,
     category: 'دستباف',
@@ -177,7 +174,7 @@ export const ProductData = [
     quantity: 1,
   },
   {
-    id: 10,
+    id: 15,
     title: 'فرش فانتزی مدرن',
     price: 55000000,
     category: 'مدرن',
@@ -185,7 +182,7 @@ export const ProductData = [
     quantity: 1,
   },
   {
-    id: 11,
+    id: 16,
     title: 'فرش کلاسیک 700 شانه',
     price: 64000000,
     category: 'ماشینی',
@@ -193,7 +190,7 @@ export const ProductData = [
     quantity: 1,
   },
   {
-    id: 12,
+    id: 17,
     title: 'فرش گل برجسته اصفهان',
     price: 98000000,
     category: 'ابریشمی',
@@ -201,7 +198,7 @@ export const ProductData = [
     quantity: 1,
   },
   {
-    id: 13,
+    id: 18,
     title: 'فرش سنتی ترکمن',
     price: 45000000,
     category: 'دستباف',
@@ -209,7 +206,7 @@ export const ProductData = [
     quantity: 1,
   },
   {
-    id: 14,
+    id: 19,
     title: 'فرش فانتزی کودک',
     price: 39000000,
     category: 'مدرن',
@@ -217,7 +214,7 @@ export const ProductData = [
     quantity: 1,
   },
   {
-    id: 15,
+    id: 20,
     title: 'فرش ماشینی ارزان',
     price: 27000000,
     category: 'ماشینی',
@@ -225,7 +222,7 @@ export const ProductData = [
     quantity: 1,
   },
   {
-    id: 16,
+    id: 21,
     title: 'فرش ابریشمی نایین',
     price: 48000000,
     category: 'ابریشمی',
@@ -233,7 +230,7 @@ export const ProductData = [
     quantity: 1,
   },
   {
-    id: 17,
+    id: 22,
     title: 'فرش ماشینی گل برجسته',
     price: 91000000,
     category: 'ماشینی',
@@ -241,7 +238,7 @@ export const ProductData = [
     quantity: 1,
   },
   {
-    id: 18,
+    id: 23,
     title: 'فرش دستباف مشهد',
     price: 75000000,
     category: 'دستباف',
@@ -249,7 +246,7 @@ export const ProductData = [
     quantity: 1,
   },
   {
-    id: 19,
+    id: 24,
     title: 'فرش مدرن هندسی',
     price: 47000000,
     category: 'مدرن',
@@ -257,7 +254,7 @@ export const ProductData = [
     quantity: 1,
   },
   {
-    id: 20,
+    id: 25,
     title: 'فرش ماشینی طرح افشان',
     price: 69000000,
     category: 'ماشینی',
@@ -265,7 +262,7 @@ export const ProductData = [
     quantity: 1,
   },
   {
-    id: 21,
+    id: 26,
     title: 'فرش ابریشمی قم',
     price: 62000000,
     category: 'ابریشمی',
@@ -273,7 +270,7 @@ export const ProductData = [
     quantity: 1,
   },
   {
-    id: 22,
+    id: 27,
     title: 'فرش دستباف تبریز اصیل',
     price: 10000000,
     category: 'دستباف',
@@ -281,7 +278,7 @@ export const ProductData = [
     quantity: 1,
   },
   {
-    id: 23,
+    id: 28,
     title: 'فرش مدرن فانتزی رنگی',
     price: 52000000,
     category: 'مدرن',
@@ -289,7 +286,7 @@ export const ProductData = [
     quantity: 1,
   },
   {
-    id: 24,
+    id: 29,
     title: 'فرش ماشینی ترک طرح جدید',
     price: 86000000,
     category: 'ماشینی',
@@ -297,7 +294,7 @@ export const ProductData = [
     quantity: 1,
   },
   {
-    id: 25,
+    id: 30,
     title: 'فرش ابریشمی برجسته',
     price: 35000000,
     category: 'ابریشمی',
@@ -305,7 +302,7 @@ export const ProductData = [
     quantity: 1,
   },
   {
-    id: 26,
+    id: 31,
     title: 'فرش دستباف بلوچ',
     price: 89000000,
     category: 'دستباف',
@@ -313,7 +310,7 @@ export const ProductData = [
     quantity: 1,
   },
   {
-    id: 27,
+    id: 32,
     title: 'فرش کودک طرح خرس',
     price: 31000000,
     category: 'مدرن',
@@ -321,7 +318,7 @@ export const ProductData = [
     quantity: 1,
   },
   {
-    id: 28,
+    id: 33,
     title: 'فرش ماشینی کلاسیک',
     price: 73000000,
     category: 'ماشینی',
@@ -329,7 +326,7 @@ export const ProductData = [
     quantity: 1,
   },
   {
-    id: 29,
+    id: 34,
     title: 'فرش ابریشمی کاشان',
     price: 58000000,
     category: 'ابریشمی',
@@ -337,7 +334,7 @@ export const ProductData = [
     quantity: 1,
   },
   {
-    id: 30,
+    id: 35,
     title: 'فرش دستباف هریس',
     price: 94000000,
     category: 'دستباف',
@@ -345,7 +342,7 @@ export const ProductData = [
     quantity: 1,
   },
   {
-    id: 31,
+    id: 36,
     title: 'فرش مدرن مینیمال',
     price: 48000000,
     category: 'مدرن',
@@ -353,7 +350,7 @@ export const ProductData = [
     quantity: 1,
   },
   {
-    id: 32,
+    id: 37,
     title: 'فرش ماشینی طرح خشتی',
     price: 78000000,
     category: 'ماشینی',
@@ -361,7 +358,7 @@ export const ProductData = [
     quantity: 1,
   },
   {
-    id: 33,
+    id: 38,
     title: 'فرش ابریشمی گل ابریشم',
     price: 43000000,
     category: 'ابریشمی',
@@ -369,7 +366,7 @@ export const ProductData = [
     quantity: 1,
   },
   {
-    id: 34,
+    id: 39,
     title: 'فرش دستباف سنندج',
     price: 72000000,
     category: 'دستباف',

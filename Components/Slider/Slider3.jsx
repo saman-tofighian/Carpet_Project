@@ -1,14 +1,13 @@
-import { dataSlider3 } from '@/Data';
+import { ProductData } from '@/Data';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { useState } from 'react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Autoplay, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 function Slider3() {
-  const [data] = useState(dataSlider3);
+  const filterData = ProductData.filter((item) => item.id >= 9 && item.id < 14);
   return (
     <section className='w-full mt-4 lg:mt-16 mb-24'>
       <div className='w-full px-[6%]'>
@@ -33,7 +32,7 @@ function Slider3() {
             }}
             className='mySwiper custom-pagination'
           >
-            {data.map((val) => (
+            {filterData.map((val) => (
               <SwiperSlide
                 key={val.id}
                 className='border border-[#D9D9D9] rounded-[12px] p-4'
@@ -57,17 +56,18 @@ function Slider3() {
                       {val.title}
                     </p>
                   </div>
-                  <div className='w-full flex justify-between px-6 mt-8'>
-                    <span className='text-[#121212] font-medium text-[16px]'>
+                  <div className='w-full flex justify-between px-6 mt-8 items-center'>
+                    <span className='text-[#121212] font-medium text-[16px] mt-0.5'>
                       قیمت :
                     </span>
-                    <span className='text-[#121212] font-medium text-[18px]'>
-                      {val.price}
+                    <span className='text-[#121212] font-medium text-[18px] flex gap-x-1.5'>
+                      {val.price.toLocaleString('fa', 'ir')}
+                      <span>تومان</span>
                     </span>
                   </div>
                   <div className='w-full flex justify-center px-6 mt-10'>
                     <Link
-                      href='/'
+                      href={`/products/${val.id}`}
                       className='text-[#CB1B1B] border border-[#CB1B1B] rounded-[12px] py-3 w-full text-center text-[15px] font-bold ease-linear duration-700 hover:text-white hover:bg-[#CB1B1B]'
                     >
                       مشاهده بیشتر
