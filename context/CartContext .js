@@ -35,7 +35,7 @@ export const CartProvider = ({ children }) => {
 
     const isExist = cart.find((item) => item.id === product.id);
     if (isExist) {
-      toast.error(`محصول ${product.title} قبلاً اضافه شده است`);
+      toast.error(`${product.title} قبلاً به سبد خرید شما اضافه شده است`);
       return;
     }
 
@@ -48,7 +48,7 @@ export const CartProvider = ({ children }) => {
     };
 
     setCart((prev) => [...prev, newItem]);
-    toast.success(`محصول ${product.title} به سبد خرید اضافه شد`);
+    toast.success(`${product.title} به سبد خرید شما اضافه شد`);
   };
 
   // Increase item quantity
