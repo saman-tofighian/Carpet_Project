@@ -45,7 +45,7 @@ function Slider1() {
             {filteredData.map((val) => (
               <SwiperSlide
                 key={val.id}
-                className='border border-[#D9D9D9] rounded-[12px] p-4 '
+                className='border border-[#D9D9D9] rounded-[12px] p-4'
               >
                 <motion.div
                   initial={{ opacity: 0 }}

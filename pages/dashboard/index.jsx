@@ -1,5 +1,6 @@
 import { ProductData } from '@/Data';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { useCart } from '../../context/CartContext ';
 
 export default function Dashboard() {
@@ -17,7 +18,6 @@ export default function Dashboard() {
     email: 'samantofighian78@gmail.com',
   };
 
-  // Animation variants for smooth transitions
   const containerVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -35,8 +35,6 @@ export default function Dashboard() {
       transition: { duration: 0.4, ease: 'easeOut' },
     },
   };
-
-  // Sample order status for carpet orders
   const orderStatus = {
     pending: 'در انتظار',
     processing: 'در حال پردازش',
@@ -50,7 +48,6 @@ export default function Dashboard() {
 
   return (
     <div className='min-h-screen px-[6%] py-4 sm:py-6 lg:py-8'>
-      {/* Header Section */}
       <motion.header
         variants={containerVariants}
         initial='hidden'
@@ -61,16 +58,14 @@ export default function Dashboard() {
           خوش آمدید، {user.name} ✨
         </h1>
         <div className='flex items-center gap-3'>
-          <button className='rounded-full bg-red-800 px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-red-900 focus:outline-none focus:ring-2 focus:ring-red-700 focus:ring-offset-2'>
+          <button className='rounded-full bg-red-800 px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-red-900 focus:outline-none focus:ring-2 focus:ring-red-700 focus:ring-offset-2 cursor-pointer'>
             ویرایش پروفایل
           </button>
-          <button className='rounded-full bg-amber-700 px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-amber-800 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2'>
+          <button className='rounded-full bg-amber-700 px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-amber-800 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2 cursor-pointer'>
             مرور فرش‌ها
           </button>
         </div>
       </motion.header>
-
-      {/* Quick Stats Widget */}
       <motion.div
         variants={containerVariants}
         initial='hidden'
@@ -97,8 +92,6 @@ export default function Dashboard() {
           <p className='text-2xl font-bold'>0</p>
         </div>
       </motion.div>
-
-      {/* Account Info Card */}
       <motion.div
         variants={containerVariants}
         initial='hidden'
@@ -169,8 +162,6 @@ export default function Dashboard() {
           </div>
         </div>
       </motion.div>
-
-      {/* Recent Orders Card */}
       <motion.div
         variants={containerVariants}
         initial='hidden'
@@ -204,9 +195,12 @@ export default function Dashboard() {
             <p className='text-base text-gray-600 mb-4'>
               هنوز سفارشی ثبت نشده است.
             </p>
-            <button className='rounded-full bg-amber-700 px-6 py-2.5 text-sm font-semibold text-white hover:bg-amber-800'>
+            <Link
+              href='/products'
+              className='rounded-full bg-amber-700 px-6 py-2.5 text-sm font-semibold text-white hover:bg-amber-800 cursor-pointer'
+            >
               شروع خرید فرش
-            </button>
+            </Link>
           </div>
         ) : (
           <div className='space-y-4'>
@@ -224,7 +218,6 @@ export default function Dashboard() {
                 >
                   <div className='flex items-center space-x-4'>
                     <div className='h-12 w-12 rounded-lg bg-gray-200' />{' '}
-                    {/* Placeholder for carpet image */}
                     <div>
                       <p className='font-semibold'>{item.name}</p>
                       <p className='text-xs text-gray-600'>
@@ -242,7 +235,7 @@ export default function Dashboard() {
                     <div className='flex items-center space-x-2'>
                       <button
                         onClick={() => decreaseQuantity(item.id)}
-                        className='rounded-full bg-gray-200 p-1 hover:bg-gray-300'
+                        className='rounded-full bg-gray-200 p-1 hover:bg-gray-300 cursor-pointer'
                         disabled={(item.quantity || 1) === 1}
                       >
                         <svg
@@ -264,7 +257,7 @@ export default function Dashboard() {
                       </span>
                       <button
                         onClick={() => increaseQuantity(item.id)}
-                        className='rounded-full bg-gray-200 p-1 hover:bg-gray-300'
+                        className='rounded-full bg-gray-200 p-1 hover:bg-gray-300 cursor-pointer'
                       >
                         <svg
                           className='h-4 w-4 text-gray-600'
@@ -287,26 +280,27 @@ export default function Dashboard() {
                     </span>
                     <button
                       onClick={() => removeFromCart(item.id)}
-                      className='text-xs font-medium text-red-700 hover:text-red-900'
+                      className='text-xs font-medium text-red-700 hover:text-red-900 cursor-pointer'
                     >
                       حذف
                     </button>
-                    <button className='text-xs font-medium text-blue-700 hover:text-blue-900'>
+                    <button className='text-xs font-medium text-blue-700 hover:text-blue-900 cursor-pointer'>
                       جزئیات
                     </button>
                   </div>
                 </motion.div>
               ))}
             <div className='mt-6 flex justify-end'>
-              <button className='rounded-full bg-green-700 px-6 py-2.5 text-sm font-semibold text-white hover:bg-green-800'>
+              <Link
+                href='/shopping'
+                className='rounded-full bg-green-700 px-6 py-2.5 text-sm font-semibold text-white hover:bg-green-800'
+              >
                 تسویه حساب
-              </button>
+              </Link>
             </div>
           </div>
         )}
       </motion.div>
-
-      {/* Recommended Carpets Section */}
       <motion.div
         variants={containerVariants}
         initial='hidden'
@@ -325,21 +319,32 @@ export default function Dashboard() {
               initial='hidden'
               animate='visible'
               transition={{ delay: 0.1 * index }}
-              className='rounded-xl border border-amber-100 bg-amber-50/50 p-4 transition-all hover:bg-amber-100 hover:shadow-md'
+              className='border border-[#D9D9D9] rounded-[12px] p-4'
             >
-              <figure className=' w-full rounded-lg  mb-4'>
-                <img src={carpet.image} alt='' />
+              <figure className='w-full flex justify-center'>
+                <img
+                  src={carpet.image}
+                  alt={carpet.title}
+                  className='w-[255px] h-[261px]'
+                  loading='lazy'
+                />
               </figure>
-              {/* Placeholder for carpet image */}
-              <p className='font-semibold text-gray-900'>{carpet.title}</p>
-              <p className='text-xs text-gray-600'>جنس : ابریشم</p>
-              <p className='text-xs text-gray-600'>ابعاد : 3 * 4 متر</p>
-              <p className='text-sm font-medium text-gray-900 mt-2'>
-                {carpet.price.toLocaleString()} تومان
-              </p>
-              <button className='mt-3 w-full rounded-full bg-amber-700 px-4 py-2 text-sm font-semibold text-white hover:bg-amber-800'>
-                افزودن به سبد
-              </button>
+              <div className='mt-5'>
+                <p className='font-semibold text-gray-900'>{carpet.title}</p>
+                <p className='text-xs text-gray-600'>جنس : ابریشم</p>
+                <p className='text-xs text-gray-600'>ابعاد : 3 * 4 متر</p>
+                <p className='text-sm font-medium text-gray-900 mt-2'>
+                  {carpet.price.toLocaleString()} تومان
+                </p>
+              </div>
+              <div className='w-full flex justify-center px-6 mt-10'>
+                <Link
+                  href={`/products/${carpet.id}`}
+                  className='text-[#CB1B1B] border border-[#CB1B1B] rounded-[12px] py-3 w-full text-center text-[15px] font-bold ease-linear duration-700 hover:text-white hover:bg-[#CB1B1B]'
+                >
+                  مشاهده جزئیات
+                </Link>
+              </div>
             </motion.div>
           ))}
         </div>

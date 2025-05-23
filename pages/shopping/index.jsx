@@ -6,7 +6,7 @@ import { IoMdHome } from 'react-icons/io';
 import { useCart } from '../../context/CartContext ';
 
 export default function Shopping() {
-  const { cart, count, total } = useCart();
+  const { cart, count, total, removeFromCart, clearCart } = useCart();
 
   return (
     <section className='w-full mt-8 mb-10 xl:mb-28'>
@@ -50,12 +50,22 @@ export default function Shopping() {
         {count > 0 && total > 0 ? (
           <>
             <div className='col-span-12 sm:col-span-10 sm:col-start-2 md:col-span-8 md:col-start-3 lg:col-span-6 lg:col-start-4 xl:col-span-8 border border-[#ADADAD] py-14 px-6 rounded-[12px] mt-8'>
+              <div className='col-span-12 flex justify-center xl:justify-end mb-4 px-7'>
+                <button
+                  className='flex py-4 px-6 border text-white bg-[#CB1B1B] rounded-[12px] justify-center items-center duration-700 ease-linear hover:bg-transparent hover:border hover:text-[#CB1B1B] cursor-pointer'
+                  onClick={clearCart}
+                >
+                  خالی کردن سبد خرید
+                </button>
+              </div>
               {cart.map((item) => (
-                <ShoppingCart
-                  key={item.id}
-                  ShoppingImage={item.image}
-                  ShoppingAbout={item}
-                />
+                <div className='py-10 xl:py-8'>
+                  <ShoppingCart
+                    key={item.id}
+                    ShoppingImage={item.image}
+                    ShoppingAbout={item}
+                  />
+                </div>
               ))}
             </div>
 

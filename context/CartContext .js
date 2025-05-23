@@ -6,7 +6,6 @@ const CartContext = createContext();
 
 // Cart Provider Component
 export const CartProvider = ({ children }) => {
-  // Initialize cart from localStorage or empty array
   const [cart, setCart] = useState(() => {
     try {
       const savedCart = localStorage.getItem('cart');
@@ -17,7 +16,7 @@ export const CartProvider = ({ children }) => {
     }
   });
 
-  // Persist cart to localStorage whenever it changes
+  // Save cart to localStorage on change
   useEffect(() => {
     try {
       localStorage.setItem('cart', JSON.stringify(cart));
@@ -27,29 +26,29 @@ export const CartProvider = ({ children }) => {
     }
   }, [cart]);
 
-  // Add a carpet to the cart
+  // Add item to cart
   const addToCart = (product) => {
     if (!product?.id || !product?.title || !product?.price) {
-      toast.error('اطلاعات فرش نامعتبر است');
+      toast.error('اطلاعات محصول نامعتبر است');
       return;
     }
 
     const isExist = cart.find((item) => item.id === product.id);
     if (isExist) {
-      toast.error(`فرش ${product.title} قبلاً به سبد خرید اضافه شده است`);
+      toast.error(`محصول ${product.title} قبلاً اضافه شده است`);
       return;
     }
 
     const newItem = {
       ...product,
       quantity: 1,
-      status: 'pending', // Add default status for carpet orders
-      material: product.material || 'نامشخص', // Carpet-specific attribute
-      size: product.size || 'نامشخص', // Carpet-specific attribute
+      status: 'pending',
+      material: product.material || 'نامشخص',
+      size: product.size || 'نامشخص',
     };
 
     setCart((prev) => [...prev, newItem]);
-    toast.success(`فرش ${product.title} به سبد خرید اضافه شد`);
+    toast.success(`محصول ${product.title} به سبد خرید اضافه شد`);
   };
 
   // Increase item quantity
@@ -72,31 +71,34 @@ export const CartProvider = ({ children }) => {
     );
   };
 
-  // Remove item from cart
+  // Remove item
   const removeFromCart = (id) => {
     const item = cart.find((item) => item.id === id);
     if (!item) return;
 
     setCart((prev) => prev.filter((item) => item.id !== id));
-    toast.success(`فرش ${item.title} از سبد خرید حذف شد`);
+    toast.success(`محصول ${item.title} حذف شد`);
   };
 
-  // Clear entire cart
+  // Clear cart
   const clearCart = () => {
     setCart([]);
     toast.success('سبد خرید خالی شد');
   };
 
-  // Calculate total price
+  // Total price
   const total = cart.reduce(
     (sum, item) => sum + item.price * (item.quantity || 1),
     0
   );
 
-  // Calculate total item count
+  // Total items
   const count = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
 
-  // Provide context values
+  // Aliases (for naming consistency)
+  const incrementItem = increaseQuantity;
+  const decrementItem = decreaseQuantity;
+
   return (
     <CartContext.Provider
       value={{
@@ -106,6 +108,8 @@ export const CartProvider = ({ children }) => {
         clearCart,
         increaseQuantity,
         decreaseQuantity,
+        incrementItem,
+        decrementItem,
         total,
         count,
       }}
@@ -115,11 +119,11 @@ export const CartProvider = ({ children }) => {
   );
 };
 
-// Custom hook for accessing cart context
+// Hook to use cart context
 export const useCart = () => {
   const context = useContext(CartContext);
   if (!context) {
-    throw new Error('useCart must be used within a CartProvider');
+    throw new Error('useCart باید درون CartProvider استفاده شود');
   }
   return context;
 };
