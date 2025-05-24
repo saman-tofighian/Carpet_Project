@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 export default function MottoLeft() {
   return (
     <motion.div
@@ -9,11 +10,13 @@ export default function MottoLeft() {
       className='col-span-12 lg:col-span-6 xl:col-span-7 order-1 lg:order-2 pr-10 lg:pr-0'
     >
       <figure className='w-full flex justify-center lg:justify-end xl:pl-16 h-[450px]'>
-        <img
-          src='./motto.webp'
-          alt='carpet'
-          className='w-[328px] h-[434px] md:w-[527px] md:h-[470px]'
-          loading='lazy'
+        <Image
+          src='/motto.webp'
+          alt='فرش'
+          width={527}
+          height={470}
+          className='object-cover w-auto h-auto'
+          priority={false}
         />
       </figure>
     </motion.div>

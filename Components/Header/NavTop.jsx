@@ -1,14 +1,14 @@
-import { useCart } from '@/context/CartContext ';
 import Link from 'next/link';
+import { memo } from 'react';
 import { CiLogin } from 'react-icons/ci';
 import { IoIosLogIn } from 'react-icons/io';
 import { SlBasket } from 'react-icons/sl';
 import { VscListSelection } from 'react-icons/vsc';
-export default function NavTop({ openMobileOpen }) {
+import { useCart } from '../../context/CartContext ';
+function NavTop({ openMobileOpen }) {
   const { count } = useCart();
   return (
     <div className='w-full grid grid-cols-12'>
-      {/* search */}
       <div className='col-span-7 lg:col-span-9 flex items-center gap-x-6'>
         <span className='text-[19px] sm:text-2xl text-[#CB1B1B] font-bold order-2 lg:order-1'>
           ایـــرانی فرش
@@ -25,11 +25,10 @@ export default function NavTop({ openMobileOpen }) {
           <VscListSelection size='1.4rem' />
         </button>
       </div>
-      {/* buttons */}
       <div className='col-span-5 lg:col-span-3 flex items-center gap-x-4 justify-end'>
         <Link
           href='/shopping'
-          className='border border-[#CB1B1B] rounded-[12px] text-[#CB1B1B] px-3 py-2.5 flex justify-center items-center text-center cursor-pointer ease-in-out duration-700 hover:bg-[#cb1b1b] hover:text-white relative'
+          className='relative border border-[#CB1B1B] rounded-[12px] text-[#CB1B1B] px-3 py-2.5 flex justify-center items-center hover:bg-[#cb1b1b] hover:text-white transition duration-700'
         >
           <SlBasket size='1.4rem' />
           {count > 0 && (
@@ -38,19 +37,22 @@ export default function NavTop({ openMobileOpen }) {
             </div>
           )}
         </Link>
+
         <Link
           href='/register'
-          className='border border-[#CB1B1B] rounded-[12px] text-[#CB1B1B] px-3 py-2.5  flex xl:hidden justify-center items-center text-center cursor-pointer ease-in-out duration-700 hover:bg-[#cb1b1b] hover:text-white'
+          className='border border-[#CB1B1B] rounded-[12px] text-[#CB1B1B] px-3 py-2.5 flex xl:hidden justify-center items-center hover:bg-[#cb1b1b] hover:text-white transition duration-700'
         >
           <IoIosLogIn size='1.4rem' />
         </Link>
+
         <Link
           href='/register'
-          className='px-5 py-2.5 border border-[#CB1B1B] rounded-[12px] text-[#CB1B1B] hidden xl:flex justify-center items-center text-center gap-2 cursor-pointer ease-in-out duration-700 hover:bg-[#cb1b1b] hover:text-white'
+          className='hidden xl:flex items-center gap-2 px-5 py-2.5 border border-[#CB1B1B] rounded-[12px] text-[#CB1B1B] hover:bg-[#cb1b1b] hover:text-white transition duration-700'
         >
-          <CiLogin size='1.4rem' /> ورود / ثبت نام{' '}
+          <CiLogin size='1.4rem' /> ورود / ثبت نام
         </Link>
       </div>
     </div>
   );
 }
+export default memo(NavTop);

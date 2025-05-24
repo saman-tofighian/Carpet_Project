@@ -1,5 +1,6 @@
 import { ProductData } from '@/Data';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import Link from 'next/link';
 import { FaArrowLeft } from 'react-icons/fa6';
 import 'swiper/css';
@@ -54,11 +55,13 @@ function Slider2() {
                   viewport={{ once: true }}
                 >
                   <figure className='w-full flex justify-center'>
-                    <img
+                    <Image
                       src={val.image}
                       alt={val.alt}
-                      className='w-[255px] h-[261px]'
-                      loading='lazy'
+                      width={255}
+                      height={261}
+                      className='object-cover w-auto h-auto'
+                      priority={false}
                     />
                   </figure>
                   <div className='w-full px-6 md:px-0 xl:px-16 xl:text-center mt-6'>
