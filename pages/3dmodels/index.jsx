@@ -1,5 +1,3 @@
-'use client';
-
 import ThreeDModel from '@/Components/Carpet3d/ThreeDModel';
 import { models3D } from '@/Data';
 import { OrbitControls, Stage } from '@react-three/drei';

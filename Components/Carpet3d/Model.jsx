@@ -16,7 +16,7 @@ export default function Model() {
           </h4>
           <p className='text-[#121212] font-medium text-[1rem] lg:text-[1.3rem] mt-8 leading-11 text-wrap'>
             شما می توانید مدل های مختلف فرش هارو 3 بعدی مشاهده کنید و با توجه به
-            مدل دلخواه خرید کنید
+            مدل فرش دلخواه خود را خریداری کنید
           </p>
           <div className='w-full flex justify-center mt-8 px-8'>
             <Link

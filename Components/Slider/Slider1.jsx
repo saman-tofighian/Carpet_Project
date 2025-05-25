@@ -64,10 +64,10 @@ function Slider1() {
                       priority={false}
                     />
                   </figure>
-                  <div className='w-full px-3 md:px-0 xl:px-16 xl:text-center mt-6'>
-                    <p className='font-medium text-[15px] md:text-[14px] md:text-nowrap lg:text-wrap lg:text-[18px] xl:text-[#121212] leading-8'>
+                  <div className='w-full px-3 md:px-0 mt-6'>
+                    <h2 className='font-medium text-[15px] md:text-[14px] md:text-nowrap xl:text-wrap xl:text-[17px] xl:text-[#121212] leading-8'>
                       {val.title}
-                    </p>
+                    </h2>
                   </div>
                   <div className='w-full flex justify-between px-6 mt-8'>
                     <span className='text-[#121212] font-medium text-[16px]'>
