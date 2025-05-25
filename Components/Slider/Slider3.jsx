@@ -13,7 +13,7 @@ function Slider3() {
     <section className='w-full mt-4 lg:mt-16 mb-24'>
       <div className='w-full px-[6%]'>
         <div className='w-full flex items-center md:justify-between'>
-          <h3 className='font-bold text-2xl text-[#121212]'>فرش های مشابه</h3>
+          <h2 className='font-bold text-2xl text-[#121212]'>فرش های مشابه</h2>
         </div>
         <div className='w-full mt-12'>
           <Swiper
@@ -50,7 +50,7 @@ function Slider3() {
                       alt={val.alt}
                       width={255}
                       height={261}
-                      className='object-cover w-auto h-auto'
+                      className='w-auto h-auto'
                       priority={false}
                     />
                   </figure>

@@ -15,7 +15,7 @@ export default function MottoLeft() {
           alt='فرش'
           width={527}
           height={470}
-          className='object-cover w-auto h-auto'
+          className=' w-auto h-auto'
           priority={false}
         />
       </figure>

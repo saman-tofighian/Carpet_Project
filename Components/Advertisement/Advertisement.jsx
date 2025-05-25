@@ -12,13 +12,13 @@ export default function Advertisement() {
           viewport={{ once: true }}
           className='col-span-12 lg:col-span-6 text-center px-[15%] order-2 lg:order-1'
         >
-          <h2 className='text-[#000000] font-medium text-[1.6rem] lg:text-[2.7rem]'>
+          <h4 className='text-[#000000] font-medium text-[1.6rem] lg:text-[2.7rem]'>
             عضویت در باشگاه مشتریان
-          </h2>
-          <h2 className='text-[#CB1B1B] font-medium text-[1.6rem] lg:text-[2.7rem]'>
+          </h4>
+          <h4 className='text-[#CB1B1B] font-medium text-[1.6rem] lg:text-[2.7rem]'>
             {' '}
             ایـــرانی فرش
-          </h2>
+          </h4>
           <p className='text-[#121212] font-medium text-[1rem] lg:text-[1.3rem] mt-8 leading-11 text-wrap'>
             با عضویت در باشگاه مشتریان ایرانــی فرش زودتر از تخفیفات با خبر شوید
             و از امکان تحویل رایگان فرش های خود بهره مند شوید.

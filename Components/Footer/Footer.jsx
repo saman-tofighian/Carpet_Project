@@ -13,7 +13,7 @@ export default function Footer() {
       <footer className='w-full bg-[#F9F9F9]'>
         <section className='w-full px-[6%] py-7 grid grid-cols-12 gap-y-12 xl:gap-x-16 xl:gap-y-0'>
           <div className='col-span-12 xl:col-span-5 order-4 xl:order-1'>
-            <h3 className='text-[#CB1B1B] font-bold text-2xl'>ایـــرانی فرش</h3>
+            <h5 className='text-[#CB1B1B] font-bold text-2xl'>ایـــرانی فرش</h5>
             <p className='text-[16px] font-medium mt-5 leading-9'>
               با ایرانی فرش همراه باشید و از زیبایی و شگفتی های فرش های متنوع و
               با کیفیت ما لذت ببرید. خرید آسان، تحویل سریع و خدمات پس از فروش
@@ -23,7 +23,7 @@ export default function Footer() {
           </div>
           <div className='col-span-6 sm:col-span-4 xl:col-span-2 order-1 xl:order-2'>
             <ul className='w-full text-[#505050] text-[16px] flex flex-col'>
-              <h6 className='font-bold'>فرش های دست بافت</h6>
+              <h5 className='font-bold'>فرش های دست بافت</h5>
               <span className='texy-[#717171] mt-7 font-medium'>لوکس</span>
               <span className='texy-[#717171] mt-5 font-medium'>قدیمی</span>
               <span className='texy-[#717171] mt-5 font-medium'>مدرن</span>
@@ -31,7 +31,7 @@ export default function Footer() {
           </div>
           <div className='col-span-6 sm:col-span-4 xl:col-span-2 order-2 xl:order-3'>
             <ul className='w-full text-[#505050] text-[16px] flex flex-col'>
-              <h6 className='font-bold'>فرش های ماشینی</h6>
+              <h5 className='font-bold'>فرش های ماشینی</h5>
               <span className='texy-[#717171] mt-7 font-medium'>لوکس</span>
               <span className='texy-[#717171] mt-5 font-medium'>قدیمی</span>
               <span className='texy-[#717171] mt-5 font-medium'>مدرن</span>
@@ -39,7 +39,7 @@ export default function Footer() {
           </div>
           <div className='col-span-6 sm:col-span-4 xl:col-span-2 order-3 xl:order-4'>
             <ul className='w-full text-[#505050] text-[16px] flex flex-col'>
-              <h6 className='font-bold'>سایر فرش ها</h6>
+              <h5 className='font-bold'>سایر فرش ها</h5>
               <span className='texy-[#717171] mt-7 font-medium'>لوکس</span>
               <span className='texy-[#717171] mt-5 font-medium'>قدیمی</span>
               <span className='texy-[#717171] mt-5 font-medium'>مدرن</span>

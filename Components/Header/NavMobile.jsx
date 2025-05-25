@@ -12,6 +12,7 @@ function NavMobile({ isOpen, setIsOpen }) {
           ? 'opacity-100 pointer-events-auto'
           : 'opacity-0 pointer-events-none'
       }`}
+      onClick={() => setIsOpen(false)}
     >
       <div
         className={`absolute inset-0 bg-black transition-opacity duration-1000 ease-linear ${
@@ -20,16 +21,16 @@ function NavMobile({ isOpen, setIsOpen }) {
       ></div>
 
       <div
-        className={`absolute top-0 right-0 w-[80%] sm:w-[60%] h-full bg-white transition-transform duration-1000 ease-linear ${
+        className={`absolute top-0 right-0 w-[65%] sm:w-[60%] h-full bg-white transition-transform duration-1000 ease-linear ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         } flex flex-col`}
       >
-        <div className='w-full mt-6 px-[6%]'>
+        <div className='w-full mt-8 mb-6 px-[6%]'>
           <button
-            className='rounded-[8px] text-[#CB1B1B] p-3.5 bg-[#EDEDED] flex justify-center items-center font-extrabold cursor-pointer'
+            className='rounded-[8px] text-[#CB1B1B] p-2.5 bg-[#EDEDED] flex justify-center items-center font-extrabold cursor-pointer'
             onClick={() => setIsOpen(false)}
           >
-            <MdOutlineClose size='2rem' />
+            <MdOutlineClose size='1.8rem' />
           </button>
         </div>
 

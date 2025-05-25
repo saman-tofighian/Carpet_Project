@@ -7,13 +7,13 @@ export default function Model() {
     <section className='w-full py-7 mt-20'>
       <div className='w-full grid grid-cols-12 px-[6%] items-center gap-y-22 lg:gap-y-0'>
         <div className='col-span-12 lg:col-span-5 text-center lg:mt-48 order-2 lg:order-2'>
-          <h2 className='text-[#000000] font-medium text-[1.6rem] lg:text-[2.7rem]'>
+          <h4 className='text-[#000000] font-medium text-[1.6rem] lg:text-[2.7rem]'>
             فرش های 3 بعدی
-          </h2>
-          <h2 className='text-[#CB1B1B] font-medium text-[1.6rem] lg:text-[2.7rem]'>
+          </h4>
+          <h4 className='text-[#CB1B1B] font-medium text-[1.6rem] lg:text-[2.7rem]'>
             {' '}
             ایـــرانی فرش
-          </h2>
+          </h4>
           <p className='text-[#121212] font-medium text-[1rem] lg:text-[1.3rem] mt-8 leading-11 text-wrap'>
             شما می توانید مدل های مختلف فرش هارو 3 بعدی مشاهده کنید و با توجه به
             مدل دلخواه خرید کنید
