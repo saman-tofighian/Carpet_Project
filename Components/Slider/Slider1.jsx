@@ -13,19 +13,21 @@ function Slider1() {
     (item) => item.id >= 1 && item.id <= 4
   );
   return (
-    <section className='w-full mt-4 lg:mt-16'>
-      <div className='w-full px-[6%]'>
-        <div className='w-full flex items-center md:justify-between'>
-          <h2 className='font-bold text-2xl text-[#121212]'>فرش های دستبافت</h2>
+    <section className='mt-4 lg:mt-16 w-full'>
+      <div className='px-[6%] w-full'>
+        <div className='flex md:justify-between items-center w-full'>
+          <h2 className='font-bold text-[#121212] text-2xl'>
+            شاهکارهای دستبافت ایرانی
+          </h2>
           <Link
             href='/products'
-            className='py-3 px-7 bg-transparent border border-[#CB1B1B] text-[#CB1B1B] rounded-[12px]  justify-center items-center text-center gap-x-3  ease-linear duration-700 hover:bg-[#CB1B1B] hover:text-white hidden md:flex'
+            className='hidden md:flex justify-center items-center gap-x-3 bg-transparent hover:bg-[#CB1B1B] px-7 py-3 border border-[#CB1B1B] rounded-[12px] text-[#CB1B1B] hover:text-white text-center duration-700 ease-linear'
           >
-            مشاهده همه
+            کاوش مجموعه کامل
             <FaArrowLeft />
           </Link>
         </div>
-        <div className='w-full mt-12'>
+        <div className='mt-12 w-full'>
           <Swiper
             spaceBetween={33}
             loop={true}
@@ -46,7 +48,7 @@ function Slider1() {
             {filteredData.map((val) => (
               <SwiperSlide
                 key={val.id}
-                className='border border-[#D9D9D9] rounded-[12px] p-4'
+                className='p-4 border border-[#D9D9D9] rounded-[12px]'
               >
                 <motion.div
                   initial={{ opacity: 0 }}
@@ -54,7 +56,7 @@ function Slider1() {
                   transition={{ delay: val.delay, duration: 1 }}
                   viewport={{ once: true }}
                 >
-                  <figure className='w-full flex justify-center'>
+                  <figure className='flex justify-center w-full'>
                     <Image
                       src={val.image}
                       alt={val.alt}
@@ -64,23 +66,23 @@ function Slider1() {
                       priority={false}
                     />
                   </figure>
-                  <div className='w-full px-3 md:px-0 mt-6'>
-                    <h2 className='font-medium text-[15px] md:text-[14px] md:text-nowrap xl:text-wrap xl:text-[17px] xl:text-[#121212] leading-8'>
+                  <div className='mt-6 px-3 md:px-0 w-full'>
+                    <h2 className='font-medium text-[15px] md:text-[14px] xl:text-[#121212] xl:text-[17px] xl:text-wrap md:text-nowrap leading-8'>
                       {val.title}
                     </h2>
                   </div>
-                  <div className='w-full flex justify-between px-6 mt-8'>
-                    <span className='text-[#121212] font-medium text-[16px]'>
+                  <div className='flex justify-between mt-8 px-6 w-full'>
+                    <span className='font-medium text-[#121212] text-[16px]'>
                       قیمت :
                     </span>
-                    <span className='text-[#121212] font-medium text-[18px]'>
+                    <span className='font-medium text-[#121212] text-[18px]'>
                       {val.price.toLocaleString('fa', 'ir')} تومان
                     </span>
                   </div>
-                  <div className='w-full flex justify-center px-6 mt-10'>
+                  <div className='flex justify-center mt-10 px-6 w-full'>
                     <Link
                       href={`/products/${val.id}`}
-                      className='text-[#CB1B1B] border border-[#CB1B1B] rounded-[12px] py-3 w-full text-center text-[15px] font-bold ease-linear duration-700 hover:text-white hover:bg-[#CB1B1B]'
+                      className='hover:bg-[#CB1B1B] py-3 border border-[#CB1B1B] rounded-[12px] w-full font-bold text-[#CB1B1B] text-[15px] hover:text-white text-center duration-700 ease-linear'
                     >
                       مشاهده بیشتر
                     </Link>
