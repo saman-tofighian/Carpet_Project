@@ -22,7 +22,7 @@ export default function Model() {
             transition={{ delay: 0.2, duration: 0.6 }}
             viewport={{ once: true }}
           >
-            فرش‌های سه‌بعدی، شاهکار هنر پارسی
+            فرش‌های سه‌ بعدی، شاهکار هنر پارسی
           </motion.h2>
           <motion.h3
             className='mt-3 lg:mt-7 font-semibold text-[#CB1B1B] text-2xl sm:text-3xl lg:text-4xl'
