@@ -75,8 +75,9 @@ export default function Model() {
             }
           >
             <Canvas
-              className='shadow-2xl rounded-2xl w-full h-full'
-              camera={{ position: [0, 2, 6], fov: 45 }}
+              className='bg-[#f4f4f4] shadow-2xl rounded-2xl w-full h-full'
+              gl={{ antialias: true }}
+              shadows
             >
               <Model3d />
             </Canvas>
