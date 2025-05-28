@@ -2,22 +2,8 @@ import ThreeDModel from '@/Components/Carpet3d/ThreeDModel';
 import { models3D } from '@/Data';
 import { OrbitControls, Stage } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
-import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { Suspense, useEffect, useState } from 'react';
-const cardVariants = {
-  hidden: { opacity: 0, y: 40, scale: 0.95 },
-  visible: (i) => ({
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: {
-      delay: i * 0.1,
-      duration: 0.6,
-      ease: 'easeOut',
-    },
-  }),
-};
 export default function ThreeDRugsPage() {
   const [isClient, setIsClient] = useState(false);
 
@@ -27,24 +13,18 @@ export default function ThreeDRugsPage() {
 
   return (
     <section className='mb-16 px-[6%] md:px-12 py-16 w-full'>
-      <motion.h2
+      <h2
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
         className='mb-[5rem] px-4 font-bold text-gray-900 text-2xl sm:text-5xl text-center leading-10 tracking-tight'
       >
         سفری به قلب هنر پارسی با فرش‌ های سه‌ بعدی
-      </motion.h2>
+      </h2>
       <div className='gap-10 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3'>
         {models3D.map((model, index) => (
-          <motion.div
+          <div
             key={index}
-            custom={index}
-            variants={cardVariants}
-            initial='hidden'
-            whileInView='visible'
-            viewport={{ once: true, amount: 0.2 }}
-            whileHover={{ scale: 1.02 }}
             className='bg-white shadow-xl hover:shadow-2xl rounded-3xl overflow-hidden transition-transform duration-300'
           >
             <div className='bg-[#f4f4f4] aspect-square'>
@@ -90,7 +70,7 @@ export default function ThreeDRugsPage() {
                 </Link>
               </div>
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
     </section>
