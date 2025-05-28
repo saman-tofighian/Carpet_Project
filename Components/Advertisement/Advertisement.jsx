@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function Advertisement() {
   return (
-    <section className='mt-14 lg:mt-32 mb-20 py-16 w-full'>
+    <section className='mt-9 lg:mt-32 mb-20 py-16 w-full'>
       <div className='items-center gap-6 grid grid-cols-12 mx-auto px-4 sm:px-6 lg:px-12 max-w-7xl'>
         <motion.div
           initial={{ x: 200, opacity: 0 }}
