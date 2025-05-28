@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+
 export default function MottoLeft() {
   return (
     <motion.div
@@ -16,7 +17,7 @@ export default function MottoLeft() {
           width={527}
           height={470}
           className='w-auto h-auto'
-          priority={false}
+          priority={true}
         />
       </figure>
     </motion.div>
