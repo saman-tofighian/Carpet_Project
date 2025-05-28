@@ -22,7 +22,7 @@ export default function Model() {
             transition={{ delay: 0.2, duration: 0.6 }}
             viewport={{ once: true }}
           >
-            فرش‌های سه‌ بعدی، شاهکار هنر پارسی
+            فرش‌ های سه‌ بعدی، شاهکار هنر پارسی
           </motion.h2>
           <motion.h3
             className='mt-3 lg:mt-7 font-semibold text-[#CB1B1B] text-2xl sm:text-3xl lg:text-4xl'
@@ -40,9 +40,9 @@ export default function Model() {
             transition={{ delay: 0.4, duration: 0.6 }}
             viewport={{ once: true }}
           >
-            با فناوری سه‌بعدی، زیبایی و ظرافت فرش‌های ایرانی را از هر زاویه کاوش
-            کنید. طرحی بی‌نظیر انتخاب کنید که داستان فرهنگ و هنر پارسی را در
-            خانه شما روایت کند.
+            با فناوری سه‌ بعدی، زیبایی و ظرافت فرش ‌های ایرانی را از هر زاویه
+            کاوش کنید. طرحی بی‌ نظیر انتخاب کنید که داستان فرهنگ و هنر پارسی را
+            در خانه شما روایت کند.
           </motion.p>
           <motion.div
             className='flex justify-center lg:justify-start mt-10'
@@ -75,10 +75,8 @@ export default function Model() {
             }
           >
             <Canvas
-              className='bg-white shadow-2xl rounded-2xl w-full h-full'
+              className='shadow-2xl rounded-2xl w-full h-full'
               camera={{ position: [0, 2, 6], fov: 45 }}
-              gl={{ antialias: true, alpha: false }}
-              shadows
             >
               <Model3d />
             </Canvas>
