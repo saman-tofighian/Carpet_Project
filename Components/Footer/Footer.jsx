@@ -13,7 +13,7 @@ export default function Footer() {
       <footer className='bg-[#F9F9F9] w-full'>
         <section className='gap-y-12 xl:gap-x-16 xl:gap-y-0 grid grid-cols-12 px-[6%] py-7 w-full'>
           <div className='order-4 xl:order-1 col-span-12 xl:col-span-5'>
-            <h5 className='font-bold text-[#CB1B1B] text-2xl'>ایـــرانی فرش</h5>
+            <h4 className='font-bold text-[#CB1B1B] text-2xl'>ایـــرانی فرش</h4>
             <p className='mt-5 font-medium text-[16px] leading-9'>
               با ایرانی فرش همراه باشید و از زیبایی و شگفتی های فرش های متنوع و
               با کیفیت ما لذت ببرید. خرید آسان، تحویل سریع و خدمات پس از فروش

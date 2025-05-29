@@ -31,7 +31,7 @@ export default function Frame() {
           variants={containerVariants}
           initial='hidden'
           whileInView='visible'
-          viewport={{ once: true, amount: 0.4 }}
+          viewport={{ once: true, amount: 0.2 }}
         >
           <motion.figure
             className='group relative flex items-end bg-[url(/1f.webp)] bg-cover rounded-2xl w-full lg:w-[47%] xl:w-[65%] h-[318px] max-h-[318px] overflow-hidden'
@@ -75,7 +75,7 @@ export default function Frame() {
           variants={containerVariants}
           initial='hidden'
           whileInView='visible'
-          viewport={{ once: true, amount: 0.4 }}
+          viewport={{ once: true, amount: 0.2 }}
         >
           <motion.figure
             className='group relative flex items-end bg-[url(/3f.webp)] bg-center rounded-2xl w-full lg:w-[47%] xl:w-[65%] h-[160px] max-h-[160px] overflow-hidden'

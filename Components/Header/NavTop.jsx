@@ -15,7 +15,7 @@ function NavTop({ openMobileOpen }) {
         </span>
         <input
           type='search'
-          className='hidden lg:flex order-2 bg-[#EDEDED] p-3 border-0 rounded-[12px] outline-0 w-[448px] max-w-[448px] text-[#717171]'
+          className='hidden lg:flex order-2 bg-[#EDEDED] p-3 border-0 rounded-[12px] outline-0 w-[448px] max-w-[448px] text-[#cb1b1be5]'
           placeholder='جستجو  فرش'
         />
         <button
@@ -30,6 +30,7 @@ function NavTop({ openMobileOpen }) {
         <Link
           href='/shopping'
           className='relative flex justify-center items-center hover:bg-[#cb1b1b] px-3 py-2.5 border border-[#CB1B1B] rounded-[12px] text-[#CB1B1B] hover:text-white transition duration-700'
+          title='Basket'
         >
           <SlBasket size='1.4rem' />
           {count > 0 && (
@@ -42,6 +43,7 @@ function NavTop({ openMobileOpen }) {
         <Link
           href='/register'
           className='xl:hidden flex justify-center items-center hover:bg-[#cb1b1b] px-3 py-2.5 border border-[#CB1B1B] rounded-[12px] text-[#CB1B1B] hover:text-white transition duration-700'
+          title='LogIn'
         >
           <IoIosLogIn size='1.4rem' />
         </Link>
