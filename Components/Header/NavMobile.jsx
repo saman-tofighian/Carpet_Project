@@ -25,16 +25,17 @@ function NavMobile({ isOpen, setIsOpen }) {
           isOpen ? 'translate-x-0' : 'translate-x-full'
         } flex flex-col`}
       >
-        <div className='w-full mt-8 mb-6 px-[6%]'>
+        <div className='mt-8 mb-6 px-[6%] w-full'>
           <button
-            className='rounded-[8px] text-[#CB1B1B] p-2.5 bg-[#EDEDED] flex justify-center items-center font-extrabold cursor-pointer'
+            className='flex justify-center items-center bg-[#EDEDED] p-2.5 rounded-[8px] font-extrabold text-[#CB1B1B] cursor-pointer'
             onClick={() => setIsOpen(false)}
+            name='closeHamgurgerMenu'
           >
             <MdOutlineClose size='1.8rem' />
           </button>
         </div>
 
-        <ul className='flex flex-col items-center my-10 gap-y-10 text-center'>
+        <ul className='flex flex-col items-center gap-y-10 my-10 text-center'>
           {NavLinks.map((val) => (
             <li className='w-full' key={val.id}>
               <Link

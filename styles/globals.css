@@ -6,13 +6,13 @@
     url('../public/fonts/DimaYekanOutline.ttf'),
     url('../public/fonts/Persian-Yekan.ttf'),
     url('../public/fonts/YEKAN\ PLUS.TTF');
+  font-display: swap;
 }
 * {
-  /* margin: 0;
-  padding: 0; */
   box-sizing: border-box;
   font-family: Yekan, sans-serif;
   font-weight: 900;
+  font-display: swap;
 }
 body,
 html {

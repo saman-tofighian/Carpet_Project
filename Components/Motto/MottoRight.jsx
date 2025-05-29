@@ -15,7 +15,7 @@ export default function MottoRight() {
         با ایـــرانی فرش در سریع ترین زمان ممکن فرش خودت رو سفارش بده و از تنوع
         بی نظیر فرش ها لذت ببر.
       </p>
-      <div className='flex sm:flex-row flex-col justify-evenly md:justify-center lg:justify-evenly items-center gap-x-4 gap-y-6 sm:gap-y-0 md:gap-x-8 lg:gap-x-2 xl:gap-x-0 mt-14 w-full'>
+      <div className='flex sm:flex-row flex-col justify-evenly md:justify-center lg:justify-evenly items-center gap-x-4 gap-y-6 sm:gap-y-0 md:gap-x-8 lg:gap-x-2 xl:gap-x-0 mt-9 w-full'>
         <button className='bg-transparent hover:bg-[#cb1b1b] p-3 lg:p-3.5 border border-[#CB1B1B] rounded-[12px] outline-0 font-black text-[#CB1B1B] text-[15px] xl:text-[16px] hover:text-white duration-700 ease-in-out cursor-pointer'>
           محصولات ویژه ایرانی فرش
         </button>

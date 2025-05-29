@@ -21,6 +21,7 @@ function NavTop({ openMobileOpen }) {
         <button
           className='lg:hidden flex justify-center items-center order-1 bg-[#EDEDED] p-3.5 rounded-[8px] font-extrabold text-[#121212] text-center cursor-pointer'
           onClick={openMobileOpen}
+          name='HamgurgerMenu'
         >
           <VscListSelection size='1.4rem' />
         </button>
