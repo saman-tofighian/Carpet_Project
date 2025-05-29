@@ -5,8 +5,8 @@ import { memo } from 'react';
 function NavBottom() {
   const pathName = usePathname();
   return (
-    <div className='w-full grid grid-cols-12 py-2.5'>
-      <div className='col-span-12 hidden lg:block'>
+    <div className='grid grid-cols-12 py-2.5 w-full'>
+      <div className='hidden lg:block col-span-12'>
         <ul className='flex items-center gap-x-8 my-5'>
           {NavLinks.map((val) => (
             <li key={val.id}>
@@ -22,11 +22,11 @@ function NavBottom() {
           ))}
         </ul>
       </div>
-      <div className='flex col-span-12 lg:hidden md:place-items-center'>
+      <div className='lg:hidden flex md:place-items-center col-span-12'>
         <input
           type='search'
-          className='w-full p-3 outline-0 border-0 rounded-[12px] text-[#717171] bg-[#EDEDED]'
-          placeholder='جستجو  فرش'
+          className='bg-[#EDEDED] p-3 border-0 rounded-[12px] outline-0 w-full text-[#717171]'
+          title='جستجو  فرش'
         />
       </div>
     </div>

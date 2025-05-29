@@ -1,68 +1,119 @@
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 
 export default function Frame2() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3,
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { duration: 0.7, ease: 'easeOut' },
+    },
+  };
+
   return (
-    <section className='w-full mt-[6rem] lg:mt-40 pb-36'>
-      <div className='w-full px-[6%] flex items-center flex-wrap gap-y-12 xl:gap-y-0 justify-center'>
-        <div className='w-full md:w-[60%] lg:w-full xl:w-[55%] flex items-center justify-center gap-x-9  flex-wrap xl:flex-nowrap gap-y-10 xl:gap-y-0'>
-          <figure className='relative w-full lg:w-[47%] xl:w-[65%] rounded-2xl bg-[url(/5f.webp)] h-[318px] max-h-[318px] bg-cover flex items-end after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-gradient-to-r after:from-transparent after:to-[#013075] after:opacity-80 after:rounded-2xl'>
-            <div className='w-full p-8 relative z-10'>
-              <figcaption className='text-white text-[20px] font-medium mb-5'>
+    <section className='mt-[6rem] lg:mt-40 pb-36 w-full'>
+      <div className='flex flex-wrap justify-center items-center gap-y-12 xl:gap-y-0 px-[6%] w-full'>
+        <motion.div
+          className='flex flex-wrap xl:flex-nowrap justify-center items-center gap-x-9 gap-y-10 xl:gap-y-0 w-full md:w-[60%] lg:w-full xl:w-[55%]'
+          variants={containerVariants}
+          initial='hidden'
+          whileInView='visible'
+          viewport={{ once: true, amount: 0.4 }}
+        >
+          <motion.figure
+            className='group relative flex items-end bg-[url(/5f.webp)] bg-cover rounded-2xl w-full lg:w-[47%] xl:w-[65%] h-[318px] max-h-[318px] overflow-hidden'
+            variants={cardVariants}
+          >
+            <div className='absolute inset-0 bg-gradient-to-r from-transparent to-[#013075] opacity-80 group-hover:opacity-90 rounded-2xl transition-opacity duration-500' />
+            <div className='z-10 relative p-8 w-full'>
+              <figcaption className='mb-5 font-medium text-[20px] text-white'>
                 فرش مدرن فانتزی
               </figcaption>
               <Link
                 href='/'
-                className='py-2.5 px-4 border rounded-[12px] border-white bg-transparent text-white font-semibold ease-linear duration-700 hover:border-[#013075]'
+                className='bg-transparent px-4 py-2.5 border border-white hover:border-[#013075] rounded-[12px] font-semibold text-white duration-700 ease-linear'
+                aria-label='مشاهده و خرید فرش‌های مدرن فانتزی ایرانی'
               >
                 مشاهده و خرید فرش مدرن
               </Link>
             </div>
-          </figure>
-
-          <figure className='relative w-full lg:w-[47%] xl:w-[65%] rounded-2xl bg-[url(/6f.webp)] h-[318px] max-h-[318px] bg-cover flex items-end after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-gradient-to-r after:from-transparent after:to-[#013075] after:opacity-80 after:rounded-2xl'>
-            <div className='w-full p-8 relative z-10'>
-              <figcaption className='text-white text-[20px] font-medium mb-5'>
+          </motion.figure>
+          <motion.figure
+            className='group relative flex items-end bg-[url(/6f.webp)] bg-cover rounded-2xl w-full lg:w-[47%] xl:w-[65%] h-[318px] max-h-[318px] overflow-hidden'
+            variants={cardVariants}
+          >
+            <div className='absolute inset-0 bg-gradient-to-r from-transparent to-[#013075] opacity-80 group-hover:opacity-90 rounded-2xl transition-opacity duration-500' />
+            <div className='z-10 relative p-8 w-full'>
+              <figcaption className='mb-5 font-medium text-[20px] text-white'>
                 فرش دستبافت تبریز
               </figcaption>
               <Link
                 href='/'
-                className='py-2.5 px-4 border rounded-[12px] border-white bg-transparent text-white font-semibold ease-linear duration-700 hover:border-[#013075]'
+                className='bg-transparent px-4 py-2.5 border border-white hover:border-[#013075] rounded-[12px] font-semibold text-white duration-700 ease-linear'
+                aria-label='مشاهده و خرید فرش‌های دستبافت تبریز'
               >
                 مشاهده و خرید فرش تبریز
               </Link>
             </div>
-          </figure>
-        </div>
-
-        <div className='w-full md:w-[60%] lg:w-full xl:w-[45%] flex flex-wrap justify-center gap-y-9 lg:gap-x-9 xl:gap-x-0'>
-          <figure className='relative w-full lg:w-[47%] xl:w-[65%] rounded-2xl bg-[url(/7f.webp)] h-[160px] max-h-[160px] bg-center flex items-end after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-gradient-to-r after:from-transparent after:to-[#013075] after:opacity-80 after:rounded-2xl'>
-            <div className='w-full p-8 relative z-10'>
-              <figcaption className='text-white text-[20px] font-medium mb-5'>
+          </motion.figure>
+        </motion.div>
+        <motion.div
+          className='flex flex-wrap justify-center gap-y-9 lg:gap-x-9 xl:gap-x-0 w-full md:w-[60%] lg:w-full xl:w-[45%]'
+          variants={containerVariants}
+          initial='hidden'
+          whileInView='visible'
+          viewport={{ once: true, amount: 0.4 }}
+        >
+          <motion.figure
+            className='group relative flex items-end bg-[url(/7f.webp)] bg-center rounded-2xl w-full lg:w-[47%] xl:w-[65%] h-[160px] max-h-[160px] overflow-hidden'
+            variants={cardVariants}
+          >
+            <div className='absolute inset-0 bg-gradient-to-r from-transparent to-[#013075] opacity-80 group-hover:opacity-90 rounded-2xl transition-opacity duration-500' />
+            <div className='z-10 relative p-8 w-full'>
+              <figcaption className='mb-5 font-medium text-[20px] text-white'>
                 قالیچه دستبافت
               </figcaption>
               <Link
                 href='/'
-                className='py-2.5 px-4 border rounded-[12px] border-white bg-transparent text-white font-semibold ease-linear duration-700 hover:border-[#013075]'
+                className='bg-transparent px-4 py-2.5 border border-white hover:border-[#013075] rounded-[12px] font-semibold text-white duration-700 ease-linear'
+                aria-label='مشاهده و خرید قالیچه‌های دستبافت ایرانی'
               >
                 مشاهده و خرید قالیچه
               </Link>
             </div>
-          </figure>
-
-          <figure className='relative w-full lg:w-[47%] xl:w-[65%] rounded-2xl bg-[url(/8f.webp)] h-[160px] max-h-[160px] bg-cover bg-bottom flex items-end after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-gradient-to-r after:from-transparent after:to-[#013075] after:opacity-80 after:rounded-2xl'>
-            <div className='w-full p-8 relative z-10'>
-              <figcaption className='text-white text-[20px] font-medium mb-5'>
+          </motion.figure>
+          <motion.figure
+            className='group relative flex items-end bg-[url(/8f.webp)] bg-cover bg-bottom rounded-2xl w-full lg:w-[47%] xl:w-[65%] h-[160px] max-h-[160px] overflow-hidden'
+            variants={cardVariants}
+          >
+            <div className='absolute inset-0 bg-gradient-to-r from-transparent to-[#013075] opacity-80 group-hover:opacity-90 rounded-2xl transition-opacity duration-500' />
+            <div className='z-10 relative p-8 w-full'>
+              <figcaption className='mb-5 font-medium text-[20px] text-white'>
                 قالیچه ماشینی
               </figcaption>
               <Link
                 href='/'
-                className='py-2.5 px-4 border rounded-[12px] border-white bg-transparent text-white font-semibold ease-linear duration-700 hover:border-[#013075]'
+                className='bg-transparent px-4 py-2.5 border border-white hover:border-[#013075] rounded-[12px] font-semibold text-white duration-700 ease-linear'
+                aria-label='مشاهده و خرید قالیچه‌های ماشینی ایرانی'
               >
                 مشاهده و خرید قالیچه
               </Link>
             </div>
-          </figure>
-        </div>
+          </motion.figure>
+        </motion.div>
       </div>
     </section>
   );

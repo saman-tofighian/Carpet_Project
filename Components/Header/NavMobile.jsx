@@ -29,7 +29,7 @@ function NavMobile({ isOpen, setIsOpen }) {
           <button
             className='flex justify-center items-center bg-[#EDEDED] p-2.5 rounded-[8px] font-extrabold text-[#CB1B1B] cursor-pointer'
             onClick={() => setIsOpen(false)}
-            name='closeHamgurgerMenu'
+            title='closeHamgurgerMenu'
           >
             <MdOutlineClose size='1.8rem' />
           </button>
