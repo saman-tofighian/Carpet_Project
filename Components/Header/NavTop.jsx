@@ -15,8 +15,8 @@ function NavTop({ openMobileOpen }) {
         </span>
         <input
           type='search'
-          className='hidden lg:flex order-2 bg-[#EDEDED] p-3 border-0 rounded-[12px] outline-0 w-[448px] max-w-[448px] text-[#cb1b1be5]'
-          placeholder='جستجو  فرش'
+          className='hidden lg:flex order-2 bg-[#EDEDED] p-3 border-0 rounded-[12px] outline-0 w-[448px] max-w-[448px] text-[#cb1b1b]'
+          placeholder='جستجو فرش'
         />
         <button
           className='lg:hidden flex justify-center items-center order-1 bg-[#EDEDED] p-3.5 rounded-[8px] font-extrabold text-[#121212] text-center cursor-pointer'

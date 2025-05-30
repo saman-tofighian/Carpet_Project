@@ -23,7 +23,7 @@ export default function Footer() {
           </div>
           <div className='order-1 xl:order-2 col-span-6 sm:col-span-4 xl:col-span-2'>
             <ul className='flex flex-col w-full text-[#505050] text-[16px]'>
-              <h5 className='font-bold'>فرش های دست بافت</h5>
+              <li className='font-bold'>فرش های دست بافت</li>
               <li className='mt-7 font-medium texy-[#717171]'>لوکس</li>
               <li className='mt-5 font-medium texy-[#717171]'>قدیمی</li>
               <li className='mt-5 font-medium texy-[#717171]'>مدرن</li>
@@ -31,7 +31,7 @@ export default function Footer() {
           </div>
           <div className='order-2 xl:order-3 col-span-6 sm:col-span-4 xl:col-span-2'>
             <ul className='flex flex-col w-full text-[#505050] text-[16px]'>
-              <h5 className='font-bold'>فرش های ماشینی</h5>
+              <li className='font-bold'>فرش های ماشینی</li>
               <li className='mt-7 font-medium texy-[#717171]'>لوکس</li>
               <li className='mt-5 font-medium texy-[#717171]'>قدیمی</li>
               <li className='mt-5 font-medium texy-[#717171]'>مدرن</li>
@@ -39,7 +39,7 @@ export default function Footer() {
           </div>
           <div className='order-3 xl:order-4 col-span-6 sm:col-span-4 xl:col-span-2'>
             <ul className='flex flex-col w-full text-[#505050] text-[16px]'>
-              <h5 className='font-bold'>سایر فرش ها</h5>
+              <li className='font-bold'>سایر فرش ها</li>
               <li className='mt-7 font-medium texy-[#717171]'>لوکس</li>
               <li className='mt-5 font-medium texy-[#717171]'>قدیمی</li>
               <li className='mt-5 font-medium texy-[#717171]'>مدرن</li>

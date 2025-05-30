@@ -17,7 +17,7 @@ export default function ThreeDRugsPage() {
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
-        className='mb-[5rem] px-4 font-bold text-gray-900 text-2xl sm:text-5xl text-center leading-10 tracking-tight'
+        className='mb-[5rem] px-4 font-bold text-[#CB1B1B] text-2xl sm:text-5xl text-center leading-10 tracking-tight'
       >
         سفری به قلب هنر پارسی با فرش‌ های سه‌ بعدی
       </h2>
@@ -66,7 +66,7 @@ export default function ThreeDRugsPage() {
                   className='bg-transparent hover:bg-[#cb1b1b] px-8 py-3.5 border border-[#CB1B1B] rounded-[12px] w-fit font-bold text-[#CB1B1B] text-[18px] hover:text-white text-center duration-700 ease-linear'
                   aria-label='کاوش مجموعه فرش‌های سه‌بعدی ایرانی'
                 >
-                  کشف مجموعه فرش‌ها
+                  مشاهد جزئیات فرش
                 </Link>
               </div>
             </div>

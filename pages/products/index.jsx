@@ -77,12 +77,12 @@ export default function Products() {
       transition={{ duration: 0.6 }}
       className='px-4 md:px-10 py-10 min-h-screen'
     >
-      <h1 className='text-center text-5xl font-bold mb-10 text-gray-800'>
+      <h1 className='mb-10 font-bold text-[#CB1B1B] text-5xl text-center'>
         محصولات
       </h1>
 
-      <div className='flex flex-col md:flex-row justify-between items-center gap-6 mb-10'>
-        <div className='flex flex-wrap gap-3 justify-center md:justify-start'>
+      <div className='flex md:flex-row flex-col justify-between items-center gap-6 mb-10'>
+        <div className='flex flex-wrap justify-center md:justify-start gap-3'>
           {categories.map((cat) => (
             <button
               key={cat}
@@ -105,7 +105,7 @@ export default function Products() {
           <select
             value={sort}
             onChange={(e) => setSort(e.target.value)}
-            className='appearance-none pr-10 pl-4 py-2 rounded-md border border-gray-300 bg-white text-gray-800 shadow-sm hover:border-[#CB1B1B] focus:outline-none focus:ring-2 focus:ring-[#CB1B1B] transition-all duration-300 w-full md:w-60 cursor-pointer'
+            className='bg-white shadow-sm py-2 pr-10 pl-4 border border-gray-300 hover:border-[#CB1B1B] rounded-md focus:outline-none focus:ring-[#CB1B1B] focus:ring-2 w-full md:w-60 text-gray-800 transition-all duration-300 appearance-none cursor-pointer'
           >
             {sortOptions.map((opt) => (
               <option key={opt.value} value={opt.value}>
@@ -113,30 +113,30 @@ export default function Products() {
               </option>
             ))}
           </select>
-          <div className='absolute top-1/2 right-3 transform -translate-y-1/2 pointer-events-none text-gray-400'>
+          <div className='top-1/2 right-3 absolute text-gray-400 -translate-y-1/2 pointer-events-none transform'>
             {sort === 'high' ? (
               <FaSortAmountUp className='text-lg' />
             ) : sort === 'low' ? (
               <FaSortAmountDown className='text-lg' />
             ) : (
-              <FaSortAmountDown className='rotate-90 text-lg' />
+              <FaSortAmountDown className='text-lg rotate-90' />
             )}
           </div>
         </div>
       </div>
 
       {/* سرچ */}
-      <div className='flex flex-col md:flex-row items-center gap-6 mb-8'>
+      <div className='flex md:flex-row flex-col items-center gap-6 mb-8'>
         <input
           type='text'
           placeholder='جستجو ...'
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className='w-full md:w-96 px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#CB1B1B]'
+          className='px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-[#CB1B1B] focus:ring-2 w-full md:w-96'
         />
       </div>
 
-      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16'>
+      <div className='gap-x-12 gap-y-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'>
         <AnimatePresence mode='wait'>
           {currentProducts.map((product) => (
             <motion.div
@@ -148,24 +148,24 @@ export default function Products() {
               transition={{ duration: 0.3 }}
               className='bg-white shadow-md rounded-xl overflow-hidden'
             >
-              <figure className='w-full flex justify-center'>
+              <figure className='flex justify-center w-full'>
                 <img
                   src={product.image}
                   alt={product.title}
                   className='w-[325px] h-[385px] object-cover'
                 />
               </figure>
-              <div className='p-5 flex flex-col gap-2'>
-                <h3 className='font-semibold text-lg text-gray-800'>
+              <div className='flex flex-col gap-2 p-5'>
+                <h3 className='font-semibold text-gray-800 text-lg'>
                   {product.title}
                 </h3>
-                <div className='text-[#CB1B1B] font-bold text-md flex justify-between my-3.5'>
+                <div className='flex justify-between my-3.5 font-bold text-[#CB1B1B] text-md'>
                   <span className='text-gray-800'>قیمت :</span>
                   <span>{product.price.toLocaleString('fa', 'ir')} تومان</span>
                 </div>
                 <Link
                   href={`/products/${product.id}`}
-                  className='mt-3 py-3 px-4 border border-[#CB1B1B] text-[#CB1B1B] hover:bg-[#CB1B1B] hover:text-white rounded-md transition duration-700 ease-linear cursor-pointer text-center'
+                  className='hover:bg-[#CB1B1B] mt-3 px-4 py-3 border border-[#CB1B1B] rounded-md text-[#CB1B1B] hover:text-white text-center transition duration-700 ease-linear cursor-pointer'
                 >
                   مشاهده جزئیات
                 </Link>
@@ -175,7 +175,7 @@ export default function Products() {
         </AnimatePresence>
       </div>
 
-      <div className='flex justify-center mt-12 gap-2 flex-wrap'>
+      <div className='flex flex-wrap justify-center gap-2 mt-12'>
         {Array.from({ length: totalPages }, (_, i) => i + 1).map((num) => (
           <button
             key={num}

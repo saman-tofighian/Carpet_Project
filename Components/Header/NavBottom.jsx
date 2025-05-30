@@ -25,8 +25,9 @@ function NavBottom() {
       <div className='lg:hidden flex md:place-items-center col-span-12'>
         <input
           type='search'
-          className='bg-[#EDEDED] p-3 border-0 rounded-[12px] outline-0 w-full text-[#717171]'
+          className='bg-[#EDEDED] p-3 border-0 rounded-[12px] outline-0 w-full text-[#cb1b1b]'
           title='جستجو  فرش'
+          placeholder='جستجو فرش'
         />
       </div>
     </div>
