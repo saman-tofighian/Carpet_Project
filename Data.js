@@ -117,7 +117,7 @@ export const ProductData = [
     id: 7,
     image: '/slider7.webp',
     alt: 'picSlider7',
-    title: 'فرش ماشینی رادین طرح شاه عباسی زمینه کرم',
+    title: 'فرش ماشینی رادین طرح شاه عباسی کرم',
     price: 63030000,
     delay: 0.9,
     quantity: 1,
