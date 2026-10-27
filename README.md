@@ -1,40 +1,126 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# 🧶 Carpet Store — 3D E-Commerce Experience
 
-## Getting Started
+A modern and interactive carpet e-commerce website built with **Next.js, Tailwind CSS, Three.js, and React Three Fiber**. The project combines a clean shopping experience with immersive 3D visualization to help users explore carpet products in a more engaging way.
 
-First, run the development server:
+🌐 **Live Demo:** [View Live Project](https://carpet-project.vercel.app/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## ✨ Features
+
+- **Modern UI/UX** — Clean, responsive, and user-friendly interface.
+- **3D Product Visualization** — Interactive 3D experiences powered by Three.js and React Three Fiber.
+- **Product Catalog** — Browse and explore a collection of carpet products.
+- **Product Filtering** — Filter products to find suitable options more easily.
+- **Interactive Animations** — Smooth animations and transitions for an engaging experience.
+- **Responsive Design** — Optimized layouts for desktop, tablet, and mobile devices.
+- **RTL Support** — Right-to-left layout support for Persian content.
+- **Client-Side State Persistence** — Local storage for maintaining selected filter preferences.
+- **Optimized Typography** — Modern typography and consistent visual styling.
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| [Next.js](https://nextjs.org/) | React framework and application routing |
+| [React](https://react.dev/) | Building interactive user interfaces |
+| [Tailwind CSS](https://tailwindcss.com/) | Utility-first styling and responsive layouts |
+| [Three.js](https://threejs.org/) | 3D graphics and rendering |
+| [React Three Fiber](https://r3f.docs.pmnd.rs/) | Declarative Three.js integration with React |
+| [Drei](https://github.com/pmndrs/drei) | Helpers and abstractions for 3D scenes |
+| [Framer Motion](https://motion.dev/) | UI animations and transitions |
+| [Swiper](https://swiperjs.com/) | Interactive sliders and carousels |
+| [React Icons](https://react-icons.github.io/react-icons/) | Icon library |
+
+## 🚀 Getting Started
+
+Follow these steps to run the project locally.
+
+### Prerequisites
+
+- Node.js
+- npm, yarn, pnpm, or bun
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd YOUR_REPOSITORY
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   pnpm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   pnpm dev
+   ```
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## 📁 Project Structure
+
+```text
+.
+├── components/       # Reusable UI components
+├── pages/            # Application pages and API routes
+├── public/           # Static assets and 3D models
+├── styles/           # Global styles
+├── package.json      # Dependencies and scripts
+└── README.md         # Project documentation
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+*Note: The directory structure may vary depending on the current project implementation.*
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## 🎨 Design & Experience
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+The project focuses on combining e-commerce functionality with interactive 3D technology.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+- A consistent visual identity with a red and neutral-gray color palette.
+- Product-focused layouts designed to make browsing intuitive.
+- Interactive visual elements that enhance product presentation.
+- A combination of traditional online shopping patterns and modern web-based 3D experiences.
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ⚡ Performance Considerations
 
-## Learn More
+3D rendering can be resource-intensive, so performance is an important consideration for this project.
 
-To learn more about Next.js, take a look at the following resources:
+Potential optimization strategies include:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+- Lazy-loading 3D components when needed.
+- Optimizing GLB/GLTF models and texture sizes.
+- Reducing unnecessary React re-renders.
+- Dynamically importing heavy 3D components.
+- Using responsive rendering strategies for different devices.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🔮 Future Improvements
 
-## Deploy on Vercel
+- [ ] Shopping cart and checkout functionality.
+- [ ] User authentication and account management.
+- [ ] Backend integration and database support.
+- [ ] Advanced product search and filtering.
+- [ ] Product detail pages with enhanced 3D previews.
+- [ ] Performance improvements for 3D assets.
+- [ ] SEO enhancements and product metadata.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 👨‍💻 Author
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+**Your Name**
+
+- GitHub: [saman-tofighian]([https://github.com/YOUR_USERNAME](https://github.com/saman-tofighian))
+- LinkedIn: [Saman Tofighian](https://www.linkedin.com/in/saman-tofighian/)
+
+---
+
+<p align="center">
+  Built with ❤️ using Next.js, Tailwind CSS, and Three.js.
+</p>
